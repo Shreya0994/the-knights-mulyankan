@@ -1,4 +1,6 @@
-const HeaderTopBar = (props: any) => {
+import { companyInformation } from "@/data/company-information";
+
+const HeaderTopBar = () => {
   return (
     <div className="header-top-bar">
       <div className="container">
@@ -8,12 +10,12 @@ const HeaderTopBar = (props: any) => {
               <li className="list-inline-item">
                 <a href="mailto:support@gmail.com">
                   <i className="icofont-support-faq mr-2"></i>
-                  {props.emailId}
+                  {companyInformation.contactInformation.email}
                 </a>
               </li>
               <li className="list-inline-item">
                 <i className="icofont-location-pin mr-2"></i>
-                {props.address}
+                {companyInformation.contactInformation.address}
               </li>
             </ul>
           </div>
@@ -21,7 +23,9 @@ const HeaderTopBar = (props: any) => {
             <div className="text-lg-right top-right-bar mt-2 mt-lg-0">
               <a href="tel:+23-345-67890">
                 <span
-                  dangerouslySetInnerHTML={{ __html: props.telephone }}
+                  dangerouslySetInnerHTML={{
+                    __html: companyInformation.contactInformation.phoneNumber,
+                  }}
                 ></span>
               </a>
             </div>
