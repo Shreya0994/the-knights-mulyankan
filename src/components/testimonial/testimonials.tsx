@@ -1,6 +1,5 @@
 import Testimonial from './testimonial'
-import { Testimoniallists } from './data'
-import { TestimonialListProps, TestimonialProps } from '@/library/types'
+import { TestimonialListProps } from '@/library/types'
 const Testimonials = ({
   title,
   description,
