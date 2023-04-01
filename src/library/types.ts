@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import { type } from "os";
 import { ReactElement, ReactNode } from "react";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -37,13 +36,14 @@ export class CompanyInformation implements ICompanyInformation {
   }
 }
 
-export type CardItem = {
+export type Card = {
   image: string;
   title: string;
   description: string;
-  ctaname: string;
+  ctaText: string;
   href: string;
 };
+
 export type StatisticItem = {
   statName: string;
   statCount: number;
@@ -51,14 +51,13 @@ export type StatisticItem = {
   statIconClass: string;
 };
 
-export type HomePageCardLists = {
-  id: number;
-  subheading: string;
+export type InfoCard = {
+  subHeading: string;
   title: string;
   description: string;
   cta: string;
-  ctatext: string;
-  icons: string;
+  ctaText: string;
+  icon: string;
 };
 
 export type Doctor = {
