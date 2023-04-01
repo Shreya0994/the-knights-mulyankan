@@ -1,4 +1,18 @@
+import Banner from "@/components/banner/banner";
 import Head from "next/head";
+import bg from '@assets/images/bg/slider-bg-1.jpg';
+import HomePageCard from "@/components/infocard/infocard";
+import Promo from "@/components/promo/promo";
+import { StatisticItems } from "@/data/statistics"
+import Statistics from "@/components/statistics/statistics";
+import Services from "@/components/service/services";
+import { Services as ServicesData } from "@/data/services"
+import Clients from "@/components/clients/clients";
+import { Client } from "@/data/clients";
+import Testimonial from "@/components/testimonial/testimonials";
+import InfoCard from "@/components/infocard/infocard";
+import { InfoCards } from "@/data/info-card";
+import Testimonials from "@/data/testimonials";
 
 export default function Home() {
   return (
@@ -9,6 +23,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Banner title={"Total Health care solution"} heading={"Your most trusted health partner"} description={"A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat."} ctaText={"Make appoinment"} ctaLink={"appoinment.html"} bgImg={bg.src} />
+      <InfoCard cards={InfoCards} />
+      <Promo />
+      <Statistics statisticItems={StatisticItems} />
+      <Services title={ServicesData.title} description={ServicesData.description} serviceItems={ServicesData.serviceItems} />
+      <Testimonial title={Testimonials.title} description={Testimonials.description} testimonials={Testimonials.testimonials} />
+      <Clients title={Client.title} description={Client.description} clientItems={Client.clientItems} />
     </>
   );
 }
