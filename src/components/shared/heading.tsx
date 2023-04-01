@@ -1,10 +1,13 @@
-import React from "react"
+type Heading = {
+  title: string;
+  className?: string;
+};
 
-type Heading ={
-    title: string
-}
+const Heading = (props: Heading) => (
+  <h2
+    className={props.className}
+    dangerouslySetInnerHTML={{ __html: props.title }}
+  ></h2>
+);
 
-const Heading = (Props: Heading) =>  <h2 className="title-color" dangerouslySetInnerHTML={{__html: Props.title}}></h2>
-
-    
 export default Heading;

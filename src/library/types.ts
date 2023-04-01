@@ -1,5 +1,5 @@
-import { NextPage } from 'next'
-import { ReactElement, ReactNode } from 'react'
+import { NextPage } from "next";
+import { ReactElement, ReactNode } from "react";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -44,16 +44,28 @@ export type StatisticItem = {
 };
 
 export type TestimonialListProps = {
-  id: number
-  image: string
-  title: string
-  name: string
-  text: string
-}
+  id: number;
+  image: string;
+  title: string;
+  name: string;
+  text: string;
+};
 
 export type TestimonialProps = {
-  id: number
-  title: string
-  description: string
-  items: TestimonialListProps[]
-}
+  id: number;
+  title: string;
+  description: string;
+  items: TestimonialListProps[];
+};
+
+export type ServiceItem = {
+  serviceName: string;
+  serviceDescription: string;
+  serviceIconClass: string;
+};
+
+export type Services = {
+  title: string;
+  description: string;
+  serviceItems: ServiceItem[];
+};
