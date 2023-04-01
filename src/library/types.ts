@@ -42,3 +42,7 @@ export type StatisticItem = {
   statCountPlus: string;
   statIconClass: string;
 };
+
+export type ClientItem = {
+  clientLogo : string
+};
