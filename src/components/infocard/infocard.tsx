@@ -12,7 +12,7 @@ const InfoCard = (props: InfoCardProps) => {
         <div className="row">
           <div className="col-lg-12">
             <div className="feature-block d-lg-flex">
-              {props.cards.map((card, index) => (
+              {props.cards.map((card: InfoCard, index: number) => (
                 <CardItem
                   key={index}
                   icon={card.icon}

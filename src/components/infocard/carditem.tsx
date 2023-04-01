@@ -10,10 +10,7 @@ const CardItem = (props: InfoCard) => {
         </div>
         <span>{props.subHeading}</span>
         <h4 className="mb-3">{props.title}</h4>
-        <p
-          className="mb-4"
-          dangerouslySetInnerHTML={{ __html: props.description }}
-        ></p>
+        <p className="mb-4">{props.description}</p>
         {props.cta && (
           <Link href={props.cta} className="btn btn-main btn-round-full">
             {props.ctaText}
