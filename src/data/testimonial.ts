@@ -1,4 +1,6 @@
-export const Testimoniallists = [
+import { TestimonialListProps, TestimonialProps } from '@/library/types'
+
+export const Testimoniallists: Array<TestimonialListProps> = [
   {
     id: 1,
     image: 'assets/images/team/test-thumb1.jpg',
@@ -28,9 +30,17 @@ export const Testimoniallists = [
     text: 'They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.',
   },
 ]
-export const TestimonialHeader = {
+export const TestimonialHeader: TestimonialProps = {
   id: 1,
   title: 'We served over 5000+ Patients',
   description:
     'Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.',
+  items: Testimoniallists,
+}
+
+export const Recommendation: TestimonialProps = {
+  id: 1,
+  title: 'What they say about us',
+  description: '',
+  items: Testimoniallists,
 }
