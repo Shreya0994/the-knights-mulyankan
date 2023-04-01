@@ -14,7 +14,7 @@ const ContactCardInfo = () => {
                 <div className="row">
 
                     {ContactCardData.cards.map((card: SingleContactCard, index: number) =>
-                        <div className="col-lg-4 col-sm-6 col-md-6">
+                        <div key={index} className="col-lg-4 col-sm-6 col-md-6">
                             <div className="contact-block mb-4 mb-lg-0">
                                 <i className={card.logoclass}></i>
                                 <Heading title={card.text} className="h5" />

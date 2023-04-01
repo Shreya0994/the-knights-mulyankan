@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Doctor from "../doctors/doctors";
+import Doctor from "../Doctors/doctors";
 import Divider from "../shared/divider";
 import Heading from "../shared/heading";
 import Description from "../shared/description";
@@ -20,8 +20,8 @@ const Specialist = () => {
             </div>
           </div>
           <div className="row">
-            {SpecialistPageComponent.doctorItems.filter((doctorItems:Doctor,index) => index < 4).map( (doctor:Doctor, index) => ( 
-              <Doctor key={index} data={doctor}/>
+            {SpecialistPageComponent.doctorItems.filter((doctorItems: Doctor, index) => index < 4).map((doctor: Doctor, index) => (
+              <Doctor key={index} data={doctor} />
             ))}
           </div>
         </div>
