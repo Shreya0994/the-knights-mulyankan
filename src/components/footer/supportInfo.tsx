@@ -4,6 +4,9 @@ type SupportProps={
     title: string;
     supportInfo1: string;
     supportInfo2: string;
+	supportInfo3: string;
+	supportInfo4: string;
+	supportInfo5: string;
 }
 
 const Support =(props: SupportProps)=>
@@ -18,9 +21,9 @@ const Support =(props: SupportProps)=>
 					<ul className="list-unstyled footer-menu lh-35">
 						<li><a href="#">{props.supportInfo1}</a></li>
 						<li><a href="#">{props.supportInfo2}</a></li>
-						{/* <li><a href="#">Company Support </a></li>
-						<li><a href="#">FAQuestions</a></li>
-						<li><a href="#">Company Licence</a></li> */}
+						<li><a href="#">{props.supportInfo3}</a></li>
+						<li><a href="#">{props.supportInfo4}</a></li>
+						<li><a href="#">{props.supportInfo5}</a></li>
 					</ul>
 				</div>
 			</div>

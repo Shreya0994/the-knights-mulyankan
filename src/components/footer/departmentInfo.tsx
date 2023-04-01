@@ -4,6 +4,9 @@ type DepartmentProps={
     title :string;
     department1: string;
     department2: string;
+	department3: string;
+	department4: string;
+	department5: string;
 };
 
 
@@ -18,6 +21,9 @@ const Departments =(props: DepartmentProps)=>{
 					<ul className="list-unstyled footer-menu lh-35">
 						<li><a href="#">{props.department1} </a></li>
 						<li><a href="#">{props.department2}</a></li>
+						<li><a href="#">{props.department3}</a></li>
+						<li><a href="#">{props.department4}</a></li>
+						<li><a href="#">{props.department5}</a></li>
 						
 					</ul>
 				</div>

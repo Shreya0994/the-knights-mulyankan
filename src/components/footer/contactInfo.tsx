@@ -1,14 +1,14 @@
 import React from "react";
+import { useState, useEffect } from 'react'
+import { ICompanyInformation, IContactInformation } from "@/library/types";
 
 type ContactInfoProps ={
-title: string;
-contactText :string;
-contactEmail:string;
-contactTiming: string;
-contactPhone: string;
+	title:string;
+data: IContactInformation;
 }
 
-const ContactInfo =(props:ContactInfoProps)=>{
+const ContactInfo = (props: ContactInfoProps)=>{
+
     return(
 <>
 <div className="col-lg-3 col-md-6 col-sm-6">
@@ -19,17 +19,17 @@ const ContactInfo =(props:ContactInfoProps)=>{
 					<div className="footer-contact-block mb-4">
 						<div className="icon d-flex align-items-center">
 							<i className="icofont-email mr-3"></i>
-							<span className="h6 mb-0">{props.contactText}</span>
+							<span className="h6 mb-0">{props.data.address}</span>
 						</div>
-						<h4 className="mt-2"><a href="tel:+23-345-67890">{props.contactEmail}</a></h4>
+						<h4 className="mt-2"><a href="tel:+23-345-67890">{props.data?.email}</a></h4>
 					</div>
 
 					<div className="footer-contact-block">
 						<div className="icon d-flex align-items-center">
 							<i className="icofont-support mr-3"></i>
-							<span className="h6 mb-0">{props.contactTiming}</span>
+							<span className="h6 mb-0">{props.data?.timing}</span>
 						</div>
-						<h4 className="mt-2"><a href="tel:+23-345-67890">{props.contactPhone}</a></h4>
+						<h4 className="mt-2"><a href="tel:+23-345-67890">{props.data?.phoneNumber}</a></h4>
 					</div>
 				</div>
 			</div>

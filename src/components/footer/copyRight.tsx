@@ -1,7 +1,10 @@
+import Link from "next/link";
 import React from "react";
 
 type CopyRightProps={
     copyRightText: string;
+	
+	
 
 }
 
@@ -11,16 +14,16 @@ const CopyRight=(props:CopyRightProps)=>
     <div className="footer-btm py-4 mt-5">
 			<div className="row align-items-center justify-content-between">
 				<div className="col-lg-6">
-					<div className="copyright">
-                        {props.copyRightText}
-						{/* &copy; Copyright Reserved to <span className="text-color">Novena</span> by <a href="https://themefisher.com/" target="_blank">Themefisher</a> */}
-					</div>
+					
+					
+<div className="copyright" dangerouslySetInnerHTML={{__html: props.copyRightText}}></div>
+                       
 				</div>
 				<div className="col-lg-6">
 					<div className="subscribe-form text-lg-right mt-5 mt-lg-0">
 						<form action="#" className="subscribe">
 							 <input type="text" className="form-control" placeholder="Your Email address"/> 
-							<a href="#" className="btn btn-main-2 btn-round-full">Subscribe</a>
+							<Link href="#" className="btn btn-main-2 btn-round-full">Subscribe</Link>
 						</form>
 					</div>
 				</div>
@@ -35,7 +38,8 @@ const CopyRight=(props:CopyRightProps)=>
 			</div>
 		</div>
     
-    
+	
+	
     </>
     );
 
