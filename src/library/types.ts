@@ -61,3 +61,29 @@ export type Doctor = {
   longdescription: string,
   department: string
 }
+export type TestimonialListProps = {
+  id: number;
+  image: string;
+  title: string;
+  name: string;
+  text: string;
+};
+
+export type TestimonialProps = {
+  id: number;
+  title: string;
+  description: string;
+  items: TestimonialListProps[];
+};
+
+export type ServiceItem = {
+  serviceName: string;
+  serviceDescription: string;
+  serviceIconClass: string;
+};
+
+export type Services = {
+  title: string;
+  description: string;
+  serviceItems: ServiceItem[];
+};
