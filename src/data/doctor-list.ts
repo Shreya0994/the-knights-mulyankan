@@ -1,4 +1,10 @@
+import { PromoComponent, SpecialistComponent } from "@/library/types";
 import { Doctor } from "@/library/types";
+
+export const SpecialistPromoComponent : PromoComponent = {
+    title: 'Meet Our Specialist',
+    description: "Today's users expect effortless experiences. Don't let essential people and processes stay stuck in the past. Speed it up, skip the hassles"
+}
 
 export const DoctorList: Array<Doctor> = [
     {
@@ -74,4 +80,8 @@ export const DoctorList: Array<Doctor> = [
         department: 'Palmology'
     },
   ]
-  
+
+export const SpecialistPageComponent : SpecialistComponent = {
+   promo : SpecialistPromoComponent,
+   doctorItems : DoctorList
+}
