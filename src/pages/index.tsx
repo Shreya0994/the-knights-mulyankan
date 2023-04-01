@@ -22,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner title={"Total Health care solution"} heading={"Your most trusted health partner"} description={"A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat."} ctaText={"Make appoinment"} ctaLink={"appoinment.html"} bgImg={bg.src}/>
-      <HomePageCard />
+      
       <Promo/>
       <Statistics statisticItems={StatisticItems}/>
       <Services title={ServicesData.title} description={ServicesData.description} serviceItems={ServicesData.serviceItems}/>
