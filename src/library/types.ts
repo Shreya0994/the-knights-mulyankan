@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { type } from "os";
 import { ReactElement, ReactNode } from "react";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -35,3 +36,11 @@ export class CompanyInformation implements ICompanyInformation {
     this.socialLinks = socialLinks;
   }
 }
+
+export type CardItem = {
+  image: string,
+    title : string,
+    description: string
+    ctaname: string,
+    href: string
+};
