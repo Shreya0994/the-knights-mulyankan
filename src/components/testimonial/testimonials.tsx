@@ -26,11 +26,9 @@ const Testimonials = ({
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-12 testimonial-wrap-2">
-            {items.map((Testimoniallist) => {
+            {items.map((Testimoniallist, index) => {
               console.log(Testimoniallist)
-              return (
-                <Testimonial {...Testimoniallist} key={Testimoniallist.id} />
-              )
+              return <Testimonial {...Testimoniallist} key={index} />
             })}
           </div>
         </div>
