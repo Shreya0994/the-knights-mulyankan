@@ -1,4 +1,7 @@
+import Promo from "@/components/promo/promo";
+import Services from "@/components/service/services";
 import Head from "next/head";
+import { Services as serviceData } from "@/data/services";
 
 export default function Home() {
   return (
@@ -9,6 +12,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Promo />
+      <Services
+        title={serviceData.title}
+        description={serviceData.description}
+        serviceItems={serviceData.serviceItems}
+      />
     </>
   );
 }
