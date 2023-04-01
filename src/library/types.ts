@@ -113,3 +113,8 @@ export type ContentBlockProps = {
   description: string
   image: string
 }
+
+export type Awards ={
+  title:string,
+  clientItems: ClientItem[]
+}
