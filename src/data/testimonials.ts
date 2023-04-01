@@ -7,3 +7,5 @@ const Testimonials: TestimonialsProps = {
     "Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.",
   testimonials: TestimonialItems,
 };
+
+export default Testimonials
