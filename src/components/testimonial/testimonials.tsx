@@ -1,11 +1,13 @@
 import Testimonial from './testimonial'
-import { Testimoniallists } from './data'
+import { TestimonialListProps } from '@/library/types'
 const Testimonials = ({
   title,
   description,
+  items,
 }: {
   title: string
   description: string
+  items: TestimonialListProps[]
 }) => {
   return (
     <section className="section testimonial-2 gray-bg">
@@ -24,11 +26,9 @@ const Testimonials = ({
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-12 testimonial-wrap-2">
-            {Testimoniallists.map((Testimoniallist) => {
+            {items.map((Testimoniallist, index) => {
               console.log(Testimoniallist)
-              return (
-                <Testimonial {...Testimoniallist} key={Testimoniallist.id} />
-              )
+              return <Testimonial {...Testimoniallist} key={index} />
             })}
           </div>
         </div>
