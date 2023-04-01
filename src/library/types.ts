@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import { type } from "os";
 import { ReactElement, ReactNode } from "react";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -37,13 +36,14 @@ export class CompanyInformation implements ICompanyInformation {
   }
 }
 
-export type CardItem = {
+export type Card = {
   image: string;
   title: string;
   description: string;
-  ctaname: string;
+  ctaText: string;
   href: string;
 };
+
 export type StatisticItem = {
   statName: string;
   statCount: number;
@@ -51,14 +51,13 @@ export type StatisticItem = {
   statIconClass: string;
 };
 
-export type HomePageCardLists = {
-  id: number;
-  subheading: string;
+export type InfoCard = {
+  subHeading: string;
   title: string;
   description: string;
   cta: string;
-  ctatext: string;
-  icons: string;
+  ctaText: string;
+  icon: string;
 };
 
 export type Doctor = {
@@ -80,19 +79,17 @@ export type Client = {
   clientItems: ClientItem[];
 };
 
-export type TestimonialListProps = {
-  id: number;
+export type TestimonialItem = {
   image: string;
   title: string;
   name: string;
   text: string;
 };
 
-export type TestimonialProps = {
-  id: number;
+export type TestimonialsProps = {
   title: string;
   description: string;
-  items: TestimonialListProps[];
+  testimonials: TestimonialItem[];
 };
 
 export type ServiceItem = {
@@ -107,8 +104,23 @@ export type Services = {
   serviceItems: ServiceItem[];
 };
 
+export type ContentBlockProps = {
+  title: string
+  description: string
+  image: string
+}
+
+export type Awards = {
+  title: string,
+  clientItems: ClientItem[]
+}
 export type ContentBlock = {
   title: string;
   description: string;
   image: string;
+};
+
+export type ReccomendationsProps = {
+  title: string;
+  testimonials: TestimonialItem[];
 };
