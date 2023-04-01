@@ -35,3 +35,10 @@ export class CompanyInformation implements ICompanyInformation {
     this.socialLinks = socialLinks;
   }
 }
+
+export type StatisticItem = {
+  statName: string;
+  statCount: number;
+  statCountPlus: string;
+  statIconClass: string;
+};
