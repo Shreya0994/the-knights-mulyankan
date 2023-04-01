@@ -1,10 +1,15 @@
-import Image from "next/image";
+import { companyInformation } from "@/data/company-information";
+import { navbarMenuList } from "@/data/navbar-data";
+import MenuItems from "./menuitmes";
+import Link from "next/link";
 
 const HeaderNavigation = () => {
   return (
     <nav className="navbar navbar-expand-lg navigation" id="navbar">
       <div className="container">
-        <a className="navbar-brand" href="index.html"></a>
+        <Link className="navbar-brand" href="index.html">
+          <img src={companyInformation.logo} alt="" className="img-fluid" />
+        </Link>
 
         <button
           className="navbar-toggler collapsed"
@@ -20,49 +25,11 @@ const HeaderNavigation = () => {
 
         <div className="collapse navbar-collapse" id="navbarmain">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="index.html">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="about.html">
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="service.html">
-                Services
-              </a>
-            </li>
-
+            {navbarMenuList.mainmenu.map((page, index) => {
+              return <MenuItems props={page} />;
+            })}
             <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="department.html"
-                id="dropdown02"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Department <i className="icofont-thin-down"></i>
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="dropdown02">
-                <li>
-                  <a className="dropdown-item" href="department.html">
-                    Departments
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="department-single.html">
-                    Department Single
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
                 href="doctor.html"
                 id="dropdown03"
@@ -71,28 +38,28 @@ const HeaderNavigation = () => {
                 aria-expanded="false"
               >
                 Doctors <i className="icofont-thin-down"></i>
-              </a>
+              </Link>
               <ul className="dropdown-menu" aria-labelledby="dropdown03">
                 <li>
-                  <a className="dropdown-item" href="doctor.html">
+                  <Link className="dropdown-item" href="doctor.html">
                     Doctors
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="doctor-single.html">
+                  <Link className="dropdown-item" href="doctor-single.html">
                     Doctor Single
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="appoinment.html">
+                  <Link className="dropdown-item" href="appoinment.html">
                     Appoinment
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
 
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
                 href="blog-sidebar.html"
                 id="dropdown05"
@@ -101,25 +68,25 @@ const HeaderNavigation = () => {
                 aria-expanded="false"
               >
                 Blog <i className="icofont-thin-down"></i>
-              </a>
+              </Link>
               <ul className="dropdown-menu" aria-labelledby="dropdown05">
                 <li>
-                  <a className="dropdown-item" href="blog-sidebar.html">
+                  <Link className="dropdown-item" href="blog-sidebar.html">
                     Blog with Sidebar
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a className="dropdown-item" href="blog-single.html">
+                  <Link className="dropdown-item" href="blog-single.html">
                     Blog Single
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="contact.html">
+              <Link className="nav-link" href="contact.html">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

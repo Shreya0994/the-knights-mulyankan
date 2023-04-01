@@ -1,4 +1,4 @@
-import HeaderNavigation from "./header-navigation";
+import HeaderNavigation from "./navbar";
 import HeaderTopBar from "./header-topbar";
 
 const Header = () => {
