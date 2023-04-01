@@ -1,5 +1,6 @@
 import { companyInformation } from "@/data/company-information";
 import { navbarMenuList } from "@/data/navbar-data";
+import Image from "next/image";
 import MenuItems from "./menuitmes";
 import Link from "next/link";
 
@@ -8,7 +9,13 @@ const HeaderNavigation = () => {
     <nav className="navbar navbar-expand-lg navigation" id="navbar">
       <div className="container">
         <Link className="navbar-brand" href="index.html">
-          <img src={companyInformation.logo} alt="" className="img-fluid" />
+          <Image
+            src={companyInformation.logo}
+            alt=""
+            width={160}
+            height={83}
+            className="img-fluid"
+          />
         </Link>
 
         <button
