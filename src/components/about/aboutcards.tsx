@@ -14,10 +14,10 @@ const AboutCards = (props: aboutProps) => {
             <div className="container">
                 <div className="row">
                 {
-                    props.cards.map(card  => 
-                    <div className="col-lg-3 col-md-6">
-                        <div className="about-block-item mb-5 mb-lg-0">
-                            <Image src={card.image} alt="about img-1" className="img-fluid w-100"/>
+                    props.cards.map((card, index)  => 
+                    <div key={index} className="col-lg-3 col-md-6">
+                        <div  className="about-block-item mb-5 mb-lg-0">
+                            <Image src={card.image} alt="" className="img-fluid w-100" width={255} height={170}/>
                             <h4 className="mt-3">{card.title}</h4>
                             <p>{card.description}</p>
                         </div>
