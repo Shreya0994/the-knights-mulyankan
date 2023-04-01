@@ -1,5 +1,5 @@
-import CardItem from '@/components/carditem'
-import { CardContent } from '@/components/homepagecarddata'
+import CardItem from '@/components/homecard/carditem'
+import { CardContent } from '@/data/home-page-card-data'
 
 
 const HomePageCard = () => {
