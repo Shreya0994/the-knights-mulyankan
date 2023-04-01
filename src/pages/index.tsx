@@ -11,6 +11,8 @@ import Clients from "@/components/clients/clients";
 import { Client } from "@/data/clients";
 import Testimonials from "@/components/testimonial/testimonials";
 import {TestimonialHeader} from "@/data/testimonial"
+import InfoCard from "@/components/infocard/infocard";
+import { InfoCards } from "@/data/info-card";
 
 export default function Home() {
   return (
@@ -22,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner title={"Total Health care solution"} heading={"Your most trusted health partner"} description={"A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat."} ctaText={"Make appoinment"} ctaLink={"appoinment.html"} bgImg={bg.src}/>
-      
+      <InfoCard cards={InfoCards}/>
       <Promo/>
       <Statistics statisticItems={StatisticItems}/>
       <Services title={ServicesData.title} description={ServicesData.description} serviceItems={ServicesData.serviceItems}/>
