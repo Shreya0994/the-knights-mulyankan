@@ -37,3 +37,10 @@ export const TestimonialHeader: TestimonialProps = {
     'Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.',
   items: Testimoniallists,
 }
+
+export const Recommendation: TestimonialProps = {
+  id: 1,
+  title: 'What they say about us',
+  description: '',
+  items: Testimoniallists,
+}
