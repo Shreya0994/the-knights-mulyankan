@@ -17,10 +17,11 @@ const Recommendations = (props: ReccomendationsProps) => {
         </div>
         <div className="row align-items-center">
           <div className="col-lg-6 testimonial-wrap offset-lg-6">
-            {items.filter((Testimoniallist,index) => index < 2).map((Testimoniallist, index) => {
-              console.log(Testimoniallist)
-              return <RecommendationItem {...Testimoniallist} key={index} />
-            })}
+            {props.testimonials.filter((Testimoniallist,index) => index < 2).map(
+              (testimonial: TestimonialItem, index: number) => (
+                <RecommendationItem {...testimonial} key={index} />
+              )
+            )}
           </div>
         </div>
       </div>

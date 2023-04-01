@@ -5,7 +5,7 @@ import PageBanner from "@/components/pageBanner/pagebanner";
 import ContentBlock from "@/components/contentblock/contentblock";
 import { Page } from "@/library/types";
 import Specialist from "@/components/specialists/specialists";
-import { Recommendation } from "@/data/testimonial";
+import { ReccomendationsData } from "@/data/reccomendations";
 import Recommendations from "@/components/recommendation/recommendations";
 
 const About = () => {
@@ -20,7 +20,7 @@ const About = () => {
             />
             <Cards cards={CardsItems} page={Page.About}/>
             <Specialist />
-            <Recommendations title={Recommendation.title} items={Recommendation.items}/>
+            <Recommendations title={ReccomendationsData.title} testimonials={ReccomendationsData.testimonials}/>
         </>
     )
 }
