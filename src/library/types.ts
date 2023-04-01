@@ -79,19 +79,17 @@ export type Client = {
   clientItems: ClientItem[];
 };
 
-export type TestimonialListProps = {
-  id: number;
+export type TestimonialItem = {
   image: string;
   title: string;
   name: string;
   text: string;
 };
 
-export type TestimonialProps = {
-  id: number;
+export type TestimonialsProps = {
   title: string;
   description: string;
-  items: TestimonialListProps[];
+  testimonials: TestimonialItem[];
 };
 
 export type ServiceItem = {
@@ -106,6 +104,16 @@ export type Services = {
   serviceItems: ServiceItem[];
 };
 
+export type ContentBlockProps = {
+  title: string
+  description: string
+  image: string
+}
+
+export type Awards = {
+  title: string,
+  clientItems: ClientItem[]
+}
 export type ContentBlock = {
   title: string;
   description: string;
@@ -128,3 +136,8 @@ export type SpecialistComponent = {
 };
 
 export enum Page { About, Deparment }
+
+export type ReccomendationsProps = {
+  title: string;
+  testimonials: TestimonialItem[];
+};

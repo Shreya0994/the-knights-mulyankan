@@ -1,20 +1,17 @@
-import RecommendationItem from './recommendationitem'
-import { TestimonialListProps } from '@/library/types'
-const Recommendations = ({
-  title,
-  items,
-}: {
-  title: string
-  items: TestimonialListProps[]
-}) => {
+import Divider from "../shared/divider";
+import Heading from "../shared/heading";
+import RecommendationItem from "./recommendationitem";
+import { ReccomendationsProps, TestimonialItem } from "@/library/types";
+
+const Recommendations = (props: ReccomendationsProps) => {
   return (
     <section className="section testimonial">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 offset-lg-6">
             <div className="section-title">
-              <h2 className="mb-4">{title}</h2>
-              <div className="divider  my-4"></div>
+              <Heading className="mb-4" title={props.title} />
+              <Divider />
             </div>
           </div>
         </div>
@@ -28,6 +25,6 @@ const Recommendations = ({
         </div>
       </div>
     </section>
-  )
-}
-export default Recommendations
+  );
+};
+export default Recommendations;
