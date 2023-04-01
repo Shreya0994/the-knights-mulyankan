@@ -47,6 +47,13 @@ export type ClientItem = {
   clientLogo : string
 };
 
+export type Client = {
+  title: string;
+  description: string;
+  clientItems: ClientItem[];
+};
+
+
 export type TestimonialListProps = {
   id: number;
   image: string;

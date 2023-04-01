@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import { ClientItem } from "@/library/types";
+import { ClientItem , Client } from "@/library/types";
+import Heading from '../shared/heading';
+import Divider from '../shared/divider';
+import Description from '../shared/description';
 
-type clientsProps = {
-    clientItems: ClientItem[];
-};
-
-const Clients = (props: clientsProps) => {
+const Clients = (props: Client) => {
     return (
         <>
             <section className="section clients">
@@ -13,9 +12,9 @@ const Clients = (props: clientsProps) => {
                     <div className="row justify-content-center">
                         <div className="col-lg-7">
                             <div className="section-title text-center">
-                                <h2>Partners who support us</h2>
-                                <div className="divider mx-auto my-4"></div>
-                                <p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+                                <Heading title={props.title} />
+                                <Divider />
+                                <Description description={props.description} />
                             </div>
                         </div>
                     </div>

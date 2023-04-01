@@ -1,4 +1,4 @@
-import { ClientItem } from "@/library/types";
+import { ClientItem, Client} from "@/library/types";
 
 const ClientItems: ClientItem[] = [
   {
@@ -21,4 +21,11 @@ const ClientItems: ClientItem[] = [
   }
 ];
 
-export { ClientItems };
+const Client: Client = {
+    title: "Partners who support us",
+    description:
+      "Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.",
+    clientItems: ClientItems,
+  };
+
+export { Client };
