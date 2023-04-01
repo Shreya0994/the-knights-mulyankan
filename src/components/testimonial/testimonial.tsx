@@ -3,14 +3,16 @@ const Testimonial = ({
   text,
   name,
   image,
+  key,
 }: {
   title: string
   text: string
   name: string
   image: string
+  key: number
 }) => {
   return (
-    <div className="testimonial-block style-2  gray-bg">
+    <div key={key} className="testimonial-block style-2  gray-bg">
       <i className="icofont-quote-right"></i>
 
       <div className="testimonial-thumb">
