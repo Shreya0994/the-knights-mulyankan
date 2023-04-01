@@ -43,6 +43,25 @@ export type StatisticItem = {
   statIconClass: string;
 };
 
+export type HomePageCardLists = {
+    id: number,
+    subheading: string,
+    title: string,
+    description: string,
+    cta: string,
+    ctatext: string,
+    icons: string
+};
+
+export type Doctor = {
+  id: number,
+  name: string,
+  image: string,
+  designation: string,
+  longdescription: string,
+  department: string
+};
+
 export type TestimonialListProps = {
   id: number;
   image: string;
