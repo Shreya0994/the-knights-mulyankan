@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import { type } from "os";
 import { ReactElement, ReactNode } from "react";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -42,6 +41,21 @@ export type StatisticItem = {
   statCount: number;
   statCountPlus: string;
   statIconClass: string;
+};
+
+export type TestimonialListProps = {
+  id: number;
+  image: string;
+  title: string;
+  name: string;
+  text: string;
+};
+
+export type TestimonialProps = {
+  id: number;
+  title: string;
+  description: string;
+  items: TestimonialListProps[];
 };
 
 export type ServiceItem = {
