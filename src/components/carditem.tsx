@@ -1,9 +1,6 @@
-import { strict } from "assert";
-import { link } from "fs";
 import Link from "next/link";
-import { ReactElement } from "react";
 
-type Cardprops = {
+type CardProps = {
     title: string
     subheading: string,
     description: string,
@@ -12,7 +9,7 @@ type Cardprops = {
     icons: string
 };
 
-const CardItem = (props: Cardprops) => {
+const CardItem = (props: CardProps) => {
     return(
         <>
             <div className="feature-item mb-5 mb-lg-0">
