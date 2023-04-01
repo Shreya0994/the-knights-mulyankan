@@ -79,19 +79,17 @@ export type Client = {
   clientItems: ClientItem[];
 };
 
-export type TestimonialListProps = {
-  id: number;
+export type TestimonialItem = {
   image: string;
   title: string;
   name: string;
   text: string;
 };
 
-export type TestimonialProps = {
-  id: number;
+export type TestimonialsProps = {
   title: string;
   description: string;
-  items: TestimonialListProps[];
+  testimonials: TestimonialItem[];
 };
 
 export type ServiceItem = {
@@ -110,4 +108,9 @@ export type ContentBlock = {
   title: string;
   description: string;
   image: string;
+};
+
+export type ReccomendationsProps = {
+  title: string;
+  testimonials: TestimonialItem[];
 };
