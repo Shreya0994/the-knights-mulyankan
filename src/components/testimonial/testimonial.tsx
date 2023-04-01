@@ -1,28 +1,28 @@
-const Testimonial = ({
-  title,
-  text,
-  name,
-  image,
-}: {
-  title: string
-  text: string
-  name: string
-  image: string
-}) => {
+import { TestimonialItem } from "@/library/types";
+import Image from "next/image";
+
+const Testimonial = (props: TestimonialItem) => {
   return (
     <div className="testimonial-block style-2  gray-bg">
       <i className="icofont-quote-right"></i>
 
       <div className="testimonial-thumb">
-        <img src={image} alt="" className="img-fluid" />
+        <Image
+          src={props.image}
+          alt=""
+          className="img-fluid"
+          width={70}
+          height={70}
+        />
       </div>
 
       <div className="client-info ">
-        <h4>{title}</h4>
-        <span>{name}</span>
-        <p>{text}</p>
+        <h4>{props.title}</h4>
+        <span>{props.name}</span>
+        <p>{props.text}</p>
       </div>
     </div>
-  )
-}
-export default Testimonial
+  );
+};
+
+export default Testimonial;

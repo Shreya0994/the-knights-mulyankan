@@ -1,4 +1,3 @@
-import bg from '@assets/images/bg/slider-bg-1.jpg';
 import Link from 'next/link';
 
 type BannerProps = {

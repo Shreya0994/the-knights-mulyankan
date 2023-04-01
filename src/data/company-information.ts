@@ -3,7 +3,7 @@ import { CompanyInformation } from "@/library/types";
 const companyInformation = new CompanyInformation(
   {
     email: "support@gmail.com",
-    address: "Address Ta-134/A, New York, USA",
+    address: "Ta-134/A, New York, USA",
     phoneNumber: "823-4565-13456",
     timing: "Mon to Fri: 08:30 - 18:00",
   },

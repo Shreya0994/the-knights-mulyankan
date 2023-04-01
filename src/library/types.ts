@@ -35,3 +35,82 @@ export class CompanyInformation implements ICompanyInformation {
     this.socialLinks = socialLinks;
   }
 }
+
+export type Card = {
+  image: string;
+  title: string;
+  description: string;
+  ctaText: string;
+  href: string;
+};
+
+export type StatisticItem = {
+  statName: string;
+  statCount: number;
+  statCountPlus: string;
+  statIconClass: string;
+};
+
+export type InfoCard = {
+  subHeading: string;
+  title: string;
+  description: string;
+  cta: string;
+  ctaText: string;
+  icon: string;
+};
+
+export type Doctor = {
+  id: number;
+  name: string;
+  image: string;
+  designation: string;
+  longdescription: string;
+  department: string;
+};
+
+export type ClientItem = {
+  clientLogo: string;
+};
+
+export type Client = {
+  title: string;
+  description: string;
+  clientItems: ClientItem[];
+};
+
+export type TestimonialItem = {
+  image: string;
+  title: string;
+  name: string;
+  text: string;
+};
+
+export type TestimonialsProps = {
+  title: string;
+  description: string;
+  testimonials: TestimonialItem[];
+};
+
+export type ServiceItem = {
+  serviceName: string;
+  serviceDescription: string;
+  serviceIconClass: string;
+};
+
+export type Services = {
+  title: string;
+  description: string;
+  serviceItems: ServiceItem[];
+};
+
+export type ContentBlock = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+export type ReccomendationsProps = {
+  title: string;
+  testimonials: TestimonialItem[];
+};
