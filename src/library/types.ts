@@ -124,3 +124,11 @@ export type ReccomendationsProps = {
   title: string;
   testimonials: TestimonialItem[];
 };
+
+export type SingleContactCard = {
+  logoclass: string,
+  text: string
+}
+export type ContactCards = {
+  cardList: SingleContactCard[]
+}
