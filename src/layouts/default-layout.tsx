@@ -8,7 +8,7 @@ const DefaultLayout = ({ children }: { children: ReactElement }) => {
   return (
     <>
       <Header />
-      <Scripts />
+      {/* <Scripts /> */}
       {children}
       <Footer />
     </>
