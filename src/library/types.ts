@@ -51,7 +51,7 @@ export type HomePageCardLists = {
     cta: string,
     ctatext: string,
     icons: string
-}
+};
 
 export type Doctor = {
   id: number,
@@ -60,7 +60,8 @@ export type Doctor = {
   designation: string,
   longdescription: string,
   department: string
-}
+};
+
 export type TestimonialListProps = {
   id: number;
   image: string;

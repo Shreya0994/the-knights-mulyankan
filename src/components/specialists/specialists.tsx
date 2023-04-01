@@ -1,6 +1,9 @@
 import Image from "next/image";
-import Doctor from "./doctors";
+import Doctor from "../Doctors/doctors";
 import { DoctorList } from '@/data/doctor-list'
+import Divider from "../shared/divider";
+import Heading from "../shared/heading";
+import Description from "../shared/description";
 
 type SpecialistProps = {
   heading: string
@@ -15,9 +18,9 @@ const Specialist = (props: SpecialistProps) => {
           <div className="row justify-content-center">
             <div className="col-lg-6">
               <div className="section-title text-center">
-                <h2 className="mb-4">{props.heading}</h2>
-                <div className="divider mx-auto my-4"></div>
-                <p>{props.description}</p>
+                <Heading className="mb-4" title={props.heading} />
+                <Divider />
+                <Description description={props.description} />
               </div>
             </div>
           </div>
