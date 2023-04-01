@@ -22,11 +22,10 @@ const HeaderTopBar = () => {
           <div className="col-lg-6">
             <div className="text-lg-right top-right-bar mt-2 mt-lg-0">
               <a href="tel:+23-345-67890">
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: companyInformation.contactInformation.phoneNumber,
-                  }}
-                ></span>
+                <span>Call Now : </span>
+                <span className="h4">
+                  {companyInformation.contactInformation.phoneNumber}
+                </span>
               </a>
             </div>
           </div>
