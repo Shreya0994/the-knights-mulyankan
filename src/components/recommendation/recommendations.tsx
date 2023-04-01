@@ -20,7 +20,7 @@ const Recommendations = ({
         </div>
         <div className="row align-items-center">
           <div className="col-lg-6 testimonial-wrap offset-lg-6">
-            {items.map((Testimoniallist, index) => {
+            {items.filter((Testimoniallist,index) => index < 2).map((Testimoniallist, index) => {
               console.log(Testimoniallist)
               return <RecommendationItem {...Testimoniallist} key={index} />
             })}

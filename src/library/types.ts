@@ -111,3 +111,20 @@ export type ContentBlock = {
   description: string;
   image: string;
 };
+
+export type PromoComponent = {
+  title: string;
+  description: string;
+};
+
+export type DepartmentComponent = {
+  promo: PromoComponent,
+  deparmentItems : Card[]
+};
+
+export type SpecialistComponent = {
+  promo: PromoComponent,
+  doctorItems : Doctor[]
+};
+
+export enum Page { About, Deparment }

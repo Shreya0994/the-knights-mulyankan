@@ -28,7 +28,7 @@ export const Testimoniallists: Array<TestimonialListProps> = [
     title: 'Nice Environment!',
     name: 'Partho Sarothi',
     text: 'They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.',
-  },
+  }
 ]
 export const TestimonialHeader: TestimonialProps = {
   id: 1,
