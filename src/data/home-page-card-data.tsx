@@ -1,12 +1,4 @@
-type HomePageCardLists = {
-    id: number,
-    subheading: string,
-    title: string,
-    description: string,
-    cta: string,
-    ctatext: string,
-    icons: string
-}
+import { HomePageCardLists } from "@/library/types";
 
 export const CardContent: Array<HomePageCardLists> = [
     {

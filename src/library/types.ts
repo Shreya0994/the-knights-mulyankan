@@ -42,3 +42,13 @@ export type StatisticItem = {
   statCountPlus: string;
   statIconClass: string;
 };
+
+export type HomePageCardLists = {
+    id: number,
+    subheading: string,
+    title: string,
+    description: string,
+    cta: string,
+    ctatext: string,
+    icons: string
+}
