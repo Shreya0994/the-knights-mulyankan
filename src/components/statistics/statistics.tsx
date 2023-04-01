@@ -16,7 +16,8 @@ const Statistics = (props: StatisticsProps) => {
                 <StatisticItem
                   statName={item.statName}
                   statCount={item.statCount}
-                  statIcon={item.statIcon}
+                  statCountPlus={item.statCountPlus}
+                  statIconClass={item.statIconClass}
                   key={index}
                 />
               )

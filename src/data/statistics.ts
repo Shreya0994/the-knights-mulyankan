@@ -4,22 +4,26 @@ const StatisticItems: StatisticItem[] = [
   {
     statName: "Happy People",
     statCount: 58,
-    statIcon: "k",
+    statCountPlus: "k",
+    statIconClass: "icofont-doctor",
   },
   {
     statName: "Surgery Comepleted",
     statCount: 700,
-    statIcon: "+",
+    statCountPlus: "+",
+    statIconClass: "icofont-flag",
   },
   {
     statName: "Expert Doctors",
     statCount: 40,
-    statIcon: "+",
+    statCountPlus: "+",
+    statIconClass: "icofont-badge",
   },
   {
     statName: "Worldwide Branch",
     statCount: 20,
-    statIcon: "",
+    statCountPlus: "+",
+    statIconClass: "icofont-globe",
   },
 ];
 

@@ -39,5 +39,6 @@ export class CompanyInformation implements ICompanyInformation {
 export type StatisticItem = {
   statName: string;
   statCount: number;
-  statIcon: string;
+  statCountPlus: string;
+  statIconClass: string;
 };
