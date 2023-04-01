@@ -1,6 +1,10 @@
-import React from "react"
-type Description ={
-descr : string
-}
-const Description = (Props :Description) => <p className="mt-4 mb-5">{Props.descr}</p>
+type Description = {
+  description: string;
+  className?: string;
+};
+
+const Description = (props: Description) => (
+  <p className={props.className}>{props.description}</p>
+);
+
 export default Description;
