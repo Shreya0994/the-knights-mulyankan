@@ -52,3 +52,12 @@ export type HomePageCardLists = {
     ctatext: string,
     icons: string
 }
+
+export type Doctor = {
+  id: number,
+  name: string,
+  image: string,
+  designation: string,
+  longdescription: string,
+  department: string
+}
