@@ -37,6 +37,13 @@ export class CompanyInformation implements ICompanyInformation {
   }
 }
 
+export type CardItem = {
+  image: string,
+    title : string,
+    description: string
+    ctaname: string,
+    href: string
+};
 export type StatisticItem = {
   statName: string
   statCount: number
