@@ -1,6 +1,6 @@
 import { Card } from "@/library/types";
 
-const Cards: Card[] = [
+const CardsItems: Card[] = [
   {
     image: "https://themewagon.github.io/novena/images/about/about-1.jpg",
     title: "Healthcare for Kids",
@@ -35,4 +35,4 @@ const Cards: Card[] = [
   },
 ];
 
-export { Cards };
+export { CardsItems };
