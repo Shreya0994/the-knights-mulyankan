@@ -1,43 +1,31 @@
 import StatisticItem from "./statisticitem";
-import { StatisticItem as StatisticsItemTypings } from "./statisticitem";
-
-const statisticsData: StatisticsItemTypings[] = [
-  {
-    statName: "Happy People",
-    statCount: 58,
-    statIcon: "k",
-  },
-  {
-    statName: "Surgery Comepleted",
-    statCount: 700,
-    statIcon: "+",
-  },
-  { statName: "Expert Doctors", statCount: 40, statIcon: "+" },
-  { statName: "Worldwide Branch", statCount: 20, statIcon: "" },
-];
+import { StatisticItem as StatisticItemTypings } from "@/library/types";
 
 type StatisticsProps = {
-  statisticItems: StatisticsItemTypings[];
+  statisticItems: StatisticItemTypings[];
 };
 
 const Statistics = (props: StatisticsProps) => {
-  <>
+  return (
     <section className="cta-section ">
       <div className="container">
         <div className="cta position-relative">
           <div className="row">
-            {props.statisticItems.map((item) => (
-              <StatisticItem
-                statName={item.statName}
-                statCount={item.statCount}
-                statIcon={item.statIcon}
-              />
-            ))}
+            {props.statisticItems.map(
+              (item: StatisticItemTypings, index: number) => (
+                <StatisticItem
+                  statName={item.statName}
+                  statCount={item.statCount}
+                  statIcon={item.statIcon}
+                  key={index}
+                />
+              )
+            )}
           </div>
         </div>
       </div>
     </section>
-  </>;
+  );
 };
 
 export default Statistics;

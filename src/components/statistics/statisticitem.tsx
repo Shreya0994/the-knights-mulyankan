@@ -1,10 +1,6 @@
-export type StatisticItem = {
-  statName: string;
-  statCount: number;
-  statIcon: string;
-};
+import { StatisticItem as StatisticItemTypings } from "@/library/types";
 
-const StatisticItem = (props: StatisticItem) => {
+const StatisticItem = (props: StatisticItemTypings) => {
   return (
     <div className="col-lg-3 col-md-6 col-sm-6">
       <div className="counter-stat">
