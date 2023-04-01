@@ -1,4 +1,5 @@
 import Head from "next/head";
+import ContentBlock from "@/components/contentblock/contentblock";
 
 export default function Home() {
   return (
@@ -9,6 +10,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ContentBlock
+        title="Award winning patient care"
+        description="Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat."
+        image="https://themewagon.github.io/novena/images/about/sign.png"
+      />
     </>
   );
 }
