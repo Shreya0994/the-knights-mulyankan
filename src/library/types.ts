@@ -104,6 +104,16 @@ export type Services = {
   serviceItems: ServiceItem[];
 };
 
+export type ContentBlockProps = {
+  title: string
+  description: string
+  image: string
+}
+
+export type Awards = {
+  title: string,
+  clientItems: ClientItem[]
+}
 export type ContentBlock = {
   title: string;
   description: string;
