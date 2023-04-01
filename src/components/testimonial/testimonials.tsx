@@ -1,23 +1,19 @@
-import Testimonial from './testimonial'
-import { TestimonialListProps } from '@/library/types'
-const Testimonials = ({
-  title,
-  description,
-  items,
-}: {
-  title: string
-  description: string
-  items: TestimonialListProps[]
-}) => {
+import Description from "../shared/description";
+import Divider from "../shared/divider";
+import Heading from "../shared/heading";
+import Testimonial from "./testimonial";
+import { TestimonialItem, TestimonialsProps } from "@/library/types";
+
+const Testimonials = (props: TestimonialsProps) => {
   return (
     <section className="section testimonial-2 gray-bg">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-7">
             <div className="section-title text-center">
-              <h2>{title}</h2>
-              <div className="divider mx-auto my-4"></div>
-              <p>{description}</p>
+              <Heading title={props.title} />
+              <Divider />
+              <Description description={props.description} />
             </div>
           </div>
         </div>
@@ -26,14 +22,21 @@ const Testimonials = ({
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-12 testimonial-wrap-2">
-            {items.map((Testimoniallist, index) => {
-              console.log(Testimoniallist)
-              return <Testimonial {...Testimoniallist} key={index} />
-            })}
+            {props.testimonials.map(
+              (testimonial: TestimonialItem, index: number) => (
+                <Testimonial
+                  image={testimonial.image}
+                  title={testimonial.title}
+                  name={testimonial.name}
+                  text={testimonial.text}
+                  key={index}
+                />
+              )
+            )}
           </div>
         </div>
       </div>
     </section>
-  )
-}
-export default Testimonials
+  );
+};
+export default Testimonials;
