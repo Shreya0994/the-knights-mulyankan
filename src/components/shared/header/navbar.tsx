@@ -26,7 +26,7 @@ const HeaderNavigation = () => {
         <div className="collapse navbar-collapse" id="navbarmain">
           <ul className="navbar-nav ml-auto">
             {navbarMenuList.mainmenu.map((page, index) => {
-              return <MenuItems props={page} />;
+              return <MenuItems props={page} key={index} />;
             })}
             <li className="nav-item dropdown">
               <Link
