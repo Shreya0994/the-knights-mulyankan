@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import Doctor from '../doctors/doctors'
-import Divider from '../shared/divider'
-import Heading from '../shared/heading'
-import Description from '../shared/description'
-import { SpecialistPageComponent } from '@/data/doctor-list'
+import Image from "next/image";
+import Doctor from "../Doctors/doctors";
+import Divider from "../shared/divider";
+import Heading from "../shared/heading";
+import Description from "../shared/description";
+import { SpecialistPageComponent } from "@/data/doctor-list";
 
 const Specialist = () => {
   return (
@@ -30,9 +30,9 @@ const Specialist = () => {
               .map((doctor: Doctor, index) => (
                 <Doctor key={index} data={doctor} />
               ))}
-          </div>
-        </div>
-      </section>
+          </div >
+        </div >
+      </section >
     </>
   )
 }
