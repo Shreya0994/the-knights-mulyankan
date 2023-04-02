@@ -36,37 +36,67 @@ const AuthContextProvider = ({ children }: { children: ReactElement }) => {
   const [authToken, setAuthToken] = useState("");
   const [me, setMe] = useState<User | null>(null);
 
-  useEffect(() => {
-    console.log("In useEffect");
+  const checkAuth = async () => {
+    console.log(appConfig.apiHost);
     setLoading(true);
     const storedAuthToken = localStorage.getItem("authToken");
     if (storedAuthToken) {
-      // setIsLoggedIn(true);
-      fetch(`${appConfig.apiHost}/api/secure/user`, {
+      const response = await fetch(`${appConfig.apiHost}/api/secure/user`, {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
           Authorization: `Bearer ${storedAuthToken}`,
         },
-      })
-        .then((response) => response.json())
-        .then((response) => {
-          setLoading(false);
-          setMe(response);
-        })
-        .catch((error) => {
-          console.log(error.status);
-          if (error.status === 401) {
-            setLoading(false);
-            router.push("/login");
-          }
-        });
+      });
+      if (response.status === 401) {
+        setLoading(false);
+        if (router.pathname !== "/login") {
+          router.push("/login");
+        }
+      } else {
+        setLoading(false);
+        const user = await response.json();
+        setMe(user);
+      }
     } else {
       setLoading(false);
       if (router.pathname !== "/login") {
         router.push("/login");
       }
     }
+  };
+
+  useEffect(() => {
+    checkAuth();
+    // console.log(appConfig.apiHost);
+    // setLoading(true);
+    // const storedAuthToken = localStorage.getItem("authToken");
+    // if (storedAuthToken) {
+    //   fetch(`${appConfig.apiHost}/api/secure/user`, {
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       Accept: "application/json",
+    //       Authorization: `Bearer ${storedAuthToken}`,
+    //     },
+    //   })
+    //     .then((response) => response.json())
+    //     .then((response) => {
+    //       setLoading(false);
+    //       setMe(response);
+    //     })
+    //     .catch((error) => {
+    //       console.log(error.status);
+    //       if (error.status === 401) {
+    //         setLoading(false);
+    //         router.push("/login");
+    //       }
+    //     });
+    // } else {
+    //   setLoading(false);
+    //   if (router.pathname !== "/login") {
+    //     router.push("/login");
+    //   }
+    // }
   }, []);
 
   const loginHandler = (userName: string, password: string) => {

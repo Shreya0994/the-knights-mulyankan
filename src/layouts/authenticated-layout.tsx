@@ -3,6 +3,7 @@ import { ReactElement } from "react";
 import Scripts from "@/components/shared/scripts";
 import Head from "next/head";
 import Footer from "@/components/footer/footer";
+import Header from "@/components/shared/header/header";
 
 type AuthenticatedLayoutProps = {
   children: ReactElement;
@@ -18,6 +19,7 @@ const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({
       </Head>
       <AuthContextProvider>
         <>
+          <Header />
           {children}
           <Footer />
         </>
