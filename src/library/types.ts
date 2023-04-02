@@ -140,21 +140,28 @@ export type ReccomendationsProps = {
   testimonials: TestimonialItem[];
 };
 
+export interface IAppointment {
+  id: number,
+  department: string,
+  doctor: string,
+  date: string,
+  time: string,
+  full_name: string,
+  phone_number: string,
+  message: string,
+  created_at: string,
+  updated_at: string
+}
 export type ContactUsForm = {
-  nameField: string;
-  emailField: string;
-  subjectField: string;
-  phoneField: string;
-  messageField: string;
-  submitButton: string;
-  title: string;
-  description: string;
-};
+  title: string
+  description: string
+}
 
 export type SingleContactCard = {
-  logoclass: string;
-  text: string;
-};
+  logoclass: string,
+  text: string,
+  subtext: string
+}
 export type ContactCards = {
   cardList: SingleContactCard[];
 };

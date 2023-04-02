@@ -12,8 +12,16 @@ import Testimonial from "@/components/testimonial/testimonials";
 import InfoCard from "@/components/infocard/infocard";
 import { InfoCards } from "@/data/info-card";
 import Testimonials from "@/data/testimonials";
+import { useEffect } from "react";
+import Script from "next/script";
 
 export default function Home() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/script.js";
+
+    document.getElementsByTagName("body")[0].appendChild(script);
+  }, []);
   return (
     <>
       <Head>
