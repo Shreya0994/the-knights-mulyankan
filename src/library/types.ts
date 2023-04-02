@@ -40,6 +40,7 @@ export type Card = {
   image: string
   title: string
   description: string
+  longdescription: string
   ctaText: string
   href: string
 }
@@ -157,7 +158,7 @@ export type ContactUsForm = {
 }
 
 export type SingleContactCard = {
-  logoclass: string,
+  logoclass: string
   text: string
 }
 export type ContactCards = {
