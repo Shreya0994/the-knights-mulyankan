@@ -2,7 +2,6 @@ import Doctors from "@/components/doctors/doctors";
 import { IDoctor } from "@/library/doctors";
 import { NextPageWithLayout } from "@/library/types";
 import Head from "next/head";
-import appConfig from "@/library/configuration";
 
 // doctors will be populated at build time by getStaticProps()
 const Doctor: NextPageWithLayout<{
