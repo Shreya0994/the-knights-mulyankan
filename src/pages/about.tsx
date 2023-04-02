@@ -21,6 +21,7 @@ const About = () => {
       <Specialist
         heading="Meet Our Specialist"
         description="Today’s users expect effortless experiences. Don’t let essential people and processes stay stuck in the past. Speed it up, skip the hassles"
+        department="Cardiology"
       />
       <Recommendations
         title={ReccomendationsData.title}

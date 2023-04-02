@@ -8,13 +8,14 @@ import { useEffect, useState } from "react";
 type SpecialistProps = {
   heading: string;
   description: string;
+  department: string;
 };
 
 const Specialist = (props: SpecialistProps) => {
   const [specialists, setSpecialists] = useState<IDoctor[] | null>(null);
 
   useEffect(() => {
-    fetch("/api/doctors")
+    fetch(`/api/doctors?department=${props.department}`)
       .then((res) => res.json())
       .then((data) => {
         setSpecialists(data);
