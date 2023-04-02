@@ -4,15 +4,19 @@ import ServiceCards from "@/components/servicecards/servicecards";
 import { NextPageWithLayout } from "@/library/types";
 import bg from "@assets/images/bg/banner.jpg";
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 
 const Service: NextPageWithLayout = () => {
+
+  
+
   return (
     <>
       <Head>
         <title>Services - Novena</title>
       </Head>
       <PageBanner heading={"Our services"} subHeading={"What We Do"} />
+      
       <ServiceCards />
       <Banner
         title={""}
@@ -26,3 +30,6 @@ const Service: NextPageWithLayout = () => {
   );
 };
 export default Service;
+
+
+
