@@ -1,16 +1,11 @@
 import Image from "next/image";
-import Doctor from "../Doctors/doctors";
-import { DoctorList } from '@/data/doctor-list'
+import Doctor from "../doctors/doctors";
 import Divider from "../shared/divider";
 import Heading from "../shared/heading";
 import Description from "../shared/description";
+import { SpecialistPageComponent } from "@/data/doctor-list";
 
-type SpecialistProps = {
-  heading: string
-  description: string
-};
-
-const Specialist = (props: SpecialistProps) => {
+const Specialist = () => {
   return (
     <>
       <section className="section team">
@@ -18,14 +13,14 @@ const Specialist = (props: SpecialistProps) => {
           <div className="row justify-content-center">
             <div className="col-lg-6">
               <div className="section-title text-center">
-                <Heading className="mb-4" title={props.heading} />
+                <Heading className="mb-4" title={SpecialistPageComponent.promo.title} />
                 <Divider />
-                <Description description={props.description} />
+                <Description description={SpecialistPageComponent.promo.description} />
               </div>
             </div>
           </div>
           <div className="row">
-            {DoctorList.filter((doctor:Doctor,index) => index < 4).map( (doctor:Doctor, index) => ( 
+            {SpecialistPageComponent.doctorItems.filter((doctorItems:Doctor,index) => index < 4).map( (doctor:Doctor, index) => ( 
               <Doctor key={index} data={doctor}/>
             ))}
           </div>
