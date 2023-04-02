@@ -4,12 +4,18 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'themewagon.github.io',
-        port: '',
-        pathname: '/novena/**',
+        protocol: "https",
+        hostname: "themewagon.github.io",
+        port: "",
+        pathname: "/novena/**",
+      },
+      {
+        protocol: "https",
+        hostname: "via.placeholder.com",
+        port: "",
+        pathname: "/**",
       },
     ],
   },
-}
-module.exports = nextConfig
+};
+module.exports = nextConfig;
