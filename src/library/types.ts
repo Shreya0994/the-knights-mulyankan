@@ -141,3 +141,16 @@ export type ReccomendationsProps = {
   title: string;
   testimonials: TestimonialItem[];
 };
+
+export interface IAppointment {
+  id: number,
+  department: string,
+  doctor: string,
+  date: string,
+  time: string,
+  full_name: string,
+  phone_number: string,
+  message: string,
+  created_at: string,
+  updated_at: string
+}
