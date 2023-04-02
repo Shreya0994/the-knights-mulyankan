@@ -1,18 +1,19 @@
 import Doctors from "@/components/doctors/doctors";
+import PageBanner from "@/components/pageBanner/pagebanner";
 import { IDoctor } from "@/library/doctors";
 import { NextPageWithLayout } from "@/library/types";
 import Head from "next/head";
 
-// doctors will be populated at build time by getStaticProps()
 const Doctor: NextPageWithLayout<{
   doctors: IDoctor[];
   departments: string[];
-}> = (props: { doctors: IDoctor[]; departments: string[] }) => {
+}> = (props) => {
   return (
     <>
       <Head>
         <title>Doctors - Novena</title>
       </Head>
+      <PageBanner heading={"All Doctors"} subHeading={"Specialized Doctors"} />
       <Doctors
         title="Doctors"
         description="We provide a wide range of creative services adipisicing elit. Autem maxime rem modi eaque, voluptate. Beatae officiis neque"

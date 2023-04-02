@@ -9,6 +9,12 @@ const nextConfig = {
         port: "",
         pathname: "/novena/**",
       },
+      {
+        protocol: "https",
+        hostname: "via.placeholder.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
