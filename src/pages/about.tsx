@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cards from "@/components/cards/cards";
 import { CardsItems } from "@/data/cards";
 import PageBanner from "@/components/pageBanner/pagebanner";
@@ -24,6 +24,12 @@ export async function getServerSideProps() {
 
 
 const About: NextPageWithLayout<{ cards: Card[] }> = (props: { cards: Card[] }) => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/script.js";
+
+    document.getElementsByTagName("body")[0].appendChild(script);
+  }, []);
 
 
   return (

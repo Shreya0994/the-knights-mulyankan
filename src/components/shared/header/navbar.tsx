@@ -35,61 +35,6 @@ const HeaderNavigation = () => {
             {navbarMenuList.mainmenu.map((page, index) => {
               return <MenuItems props={page} key={index} />;
             })}
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                href="doctor.html"
-                id="dropdown03"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Doctors <i className="icofont-thin-down"></i>
-              </Link>
-              <ul className="dropdown-menu" aria-labelledby="dropdown03">
-                <li>
-                  <Link className="dropdown-item" href="/doctors">
-                    Doctors
-                  </Link>
-                </li>
-                {/* <li>
-                  <Link className="dropdown-item" href="/doctors">
-                    Doctor Single
-                  </Link>
-                </li> */}
-                <li>
-                  <Link className="dropdown-item" href="appoinment.html">
-                    Appoinment
-                  </Link>
-                </li>
-              </ul>
-            </li>
-
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                href="blog-sidebar.html"
-                id="dropdown05"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Blog <i className="icofont-thin-down"></i>
-              </Link>
-              <ul className="dropdown-menu" aria-labelledby="dropdown05">
-                <li>
-                  <Link className="dropdown-item" href="blog-sidebar.html">
-                    Blog with Sidebar
-                  </Link>
-                </li>
-
-                <li>
-                  <Link className="dropdown-item" href="blog-single.html">
-                    Blog Single
-                  </Link>
-                </li>
-              </ul>
-            </li>
           </ul>
         </div>
       </div>

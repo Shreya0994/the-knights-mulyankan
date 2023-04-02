@@ -20,7 +20,7 @@ const Specialist = (props: SpecialistProps) => {
       .then((data) => {
         setSpecialists(data);
       });
-  }, []);
+  }, [props.department]);
 
   return (
     <section className="section team">
