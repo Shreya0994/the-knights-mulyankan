@@ -121,21 +121,24 @@ export type ContentBlock = {
 }
 
 export type PromoComponent = {
-  title: string;
-  description: string;
-};
+  title: string
+  description: string
+}
 
 export type DepartmentComponent = {
-  promo: PromoComponent,
-  deparmentItems : Card[]
-};
+  promo: PromoComponent
+  deparmentItems: Card[]
+}
 
 export type SpecialistComponent = {
-  promo: PromoComponent,
-  doctorItems : Doctor[]
-};
+  promo: PromoComponent
+  doctorItems: Doctor[]
+}
 
-export enum Page { About, Deparment }
+export enum Page {
+  About,
+  Deparment,
+}
 
 export type ReccomendationsProps = {
   title: string
@@ -149,4 +152,6 @@ export type ContactUsForm = {
   phoneField: string
   messageField: string
   submitButton: string
+  title: string
+  description: string
 }

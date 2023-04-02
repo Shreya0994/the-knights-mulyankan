@@ -1,5 +1,8 @@
 import { ContactUsForm } from '@/library/types'
 import { useState } from 'react'
+import Divider from '../shared/divider'
+import Heading from '../shared/heading'
+import Description from '../shared/description'
 
 const ContactUsForm = (props: ContactUsForm) => {
   const [user, setUser] = useState({
@@ -29,13 +32,9 @@ const ContactUsForm = (props: ContactUsForm) => {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="section-title text-center">
-              <h2 className="text-md mb-2">Contact us</h2>
-              <div className="divider mx-auto my-4"></div>
-              <p className="mb-5">
-                Laboriosam exercitationem molestias beatae eos pariatur,
-                similique, excepturi mollitia sit perferendis maiores ratione
-                aliquam?
-              </p>
+              <Heading className="text-md mb-2" title={props.title} />
+              <Divider />
+              <Description description={props.description} />
             </div>
           </div>
         </div>
