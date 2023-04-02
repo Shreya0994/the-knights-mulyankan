@@ -1,4 +1,4 @@
-import Doctors from "@/components/Doctors/doctors";
+import Doctors from "@/components/doctors/doctors";
 import { IDoctor } from "@/library/doctors";
 import { NextPageWithLayout } from "@/library/types";
 import Head from "next/head";
@@ -25,11 +25,13 @@ const Doctor: NextPageWithLayout<{
 
 // This gets called on every request
 export async function getServerSideProps() {
+  const apiHost = process.env.API_HOST;
+
   // Fetch data from external API
-  let res = await fetch("http://localhost:3000/api/doctors");
+  let res = await fetch(`${apiHost}/api/doctors`);
   const doctors = (await res.json()) as IDoctor[];
 
-  res = await fetch("http://localhost:3000/api/doctors/departments");
+  res = await fetch(`${apiHost}/api/doctors/departments`);
   const departments = (await res.json()) as string[];
 
   // Pass data to the page via props
