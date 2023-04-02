@@ -1,7 +1,6 @@
 import React from "react";
 import { SingleContactCard } from "@/library/types";
 import { ContactCards } from "@/data/contact-info-card";
-import Heading from "../shared/heading";
 
 const ContactCardData = {
     cards: ContactCards
@@ -17,7 +16,8 @@ const ContactCardInfo = () => {
                         <div key={index} className="col-lg-4 col-sm-6 col-md-6">
                             <div className="contact-block mb-4 mb-lg-0">
                                 <i className={card.logoclass}></i>
-                                <Heading title={card.text} className="h5" />
+                                <h5>{card.text}</h5>
+                                {card.subtext}
                             </div>
                         </div>
                     )}

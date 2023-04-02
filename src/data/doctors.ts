@@ -59,7 +59,7 @@ const Doctors: IDoctor[] = [
   },
   {
     id: 2,
-    image: "https://themewagon.github.io/novena/images/team/4.jpg",
+    image: "https://themewagon.github.io/novena/images/team/2.jpg",
     name: "Jonas Thomson",
     department: "Cardiology",
     subHeading: "Surgeon, Сardiologist",
@@ -79,7 +79,7 @@ const Doctors: IDoctor[] = [
   },
   {
     id: 3,
-    image: "https://themewagon.github.io/novena/images/team/2.jpg",
+    image: "https://themewagon.github.io/novena/images/team/3.jpg",
     name: "Harrision Samuel",
     department: "Radiology",
     subHeading: "Internist, General Practitioner",
@@ -99,7 +99,7 @@ const Doctors: IDoctor[] = [
   },
   {
     id: 4,
-    image: "https://themewagon.github.io/novena/images/team/3.jpg",
+    image: "https://themewagon.github.io/novena/images/team/4.jpg",
     name: "Thomas alexandar",
     department: "Radiology",
     subHeading: "Internist, General Practitioner",
@@ -119,7 +119,7 @@ const Doctors: IDoctor[] = [
   },
   {
     id: 5,
-    image: "https://themewagon.github.io/novena/images/team/3.jpg",
+    image: "https://themewagon.github.io/novena/images/team/4.jpg",
     name: "Henry Samuel",
     department: "Pediatry",
     subHeading: "Internist, General Pediatry",
@@ -159,7 +159,7 @@ const Doctors: IDoctor[] = [
   },
   {
     id: 7,
-    image: "https://themewagon.github.io/novena/images/team/4.jpg",
+    image: "https://themewagon.github.io/novena/images/team/2.jpg",
     name: "Rishat Ahmed",
     department: "Neurology",
     subHeading: "Neurology Surgeon",
@@ -179,7 +179,7 @@ const Doctors: IDoctor[] = [
   },
   {
     id: 8,
-    image: "https://themewagon.github.io/novena/images/team/3.jpg",
+    image: "https://themewagon.github.io/novena/images/team/1.jpg",
     name: "Harisson Thomas",
     department: "Orthopedic",
     subHeading: "Orthopedic Surgeon",
@@ -199,7 +199,7 @@ const Doctors: IDoctor[] = [
   },
   {
     id: 9,
-    image: "https://themewagon.github.io/novena/images/team/4.jpg",
+    image: "https://themewagon.github.io/novena/images/team/1.jpg",
     name: "Henry samuel",
     department: "Palmology",
     subHeading: "Internist, General Practitioner",
@@ -219,7 +219,7 @@ const Doctors: IDoctor[] = [
   },
   {
     id: 10,
-    image: "https://themewagon.github.io/novena/images/team/4.jpg",
+    image: "https://themewagon.github.io/novena/images/team/2.jpg",
     name: "Edward John",
     department: "Medicine",
     subHeading: "Internist, Emergency Physician",
