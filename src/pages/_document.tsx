@@ -1,17 +1,11 @@
+import Scripts from "@/components/shared/scripts";
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
-        <script async src="/assets/plugins/jquery/jquery.js"></script>
-        <script async src="/assets/plugins/bootstrap/js/bootstrap.js"></script>
-        <script async src="/assets/plugins/counterup/jquery.easing.js"></script>
-        <script
-          async
-          src="/assets/plugins/slick-carousel/slick/slick.min.js"
-        ></script>
-      </Head>
+      <Head></Head>
       <body>
         <Main />
         <NextScript />
