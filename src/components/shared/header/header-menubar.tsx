@@ -1,14 +1,14 @@
 import { companyInformation } from "@/data/company-information";
 import { navbarMenuList } from "@/data/navbar-data";
 import Image from "next/image";
-import MenuItems from "./menuitmes";
+import MenuItems from "./menuitems";
 import Link from "next/link";
 
 const HeaderNavigation = () => {
   return (
     <nav className="navbar navbar-expand-lg navigation" id="navbar">
       <div className="container">
-        <Link className="navbar-brand" href="index.html">
+        <Link className="navbar-brand" href="/">
           <Image
             src={companyInformation.logo}
             alt=""
