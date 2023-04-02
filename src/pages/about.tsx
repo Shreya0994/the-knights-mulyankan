@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cards from "@/components/cards/cards";
 import { CardsItems } from "@/data/cards";
 import PageBanner from "@/components/pageBanner/pagebanner";
@@ -10,6 +10,12 @@ import Recommendations from "@/components/recommendation/recommendations";
 import Head from "next/head";
 
 const About: NextPageWithLayout = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/script.js";
+
+    document.getElementsByTagName("body")[0].appendChild(script);
+  }, []);
   return (
     <>
       <Head>
