@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Doctors } from '@/data/doctors'
+import { deparmentItems } from '@/data/department'
 
 const AppointmentForm = ({ success }: { success: () => void }) => {
 	// Handles the submit event on form submit.
@@ -61,56 +63,48 @@ const AppointmentForm = ({ success }: { success: () => void }) => {
 								<div className="row">
 									<div className="col-lg-6">
 										<div className="form-group">
-											<select className="form-control" id="department">
-											<option>Choose Department</option>
-											<option>Software Design</option>
-											<option>Development cycle</option>
-											<option>Software Development</option>
-											<option>Maintenance</option>
-											<option>Process Query</option>
-											<option>Cost and Duration</option>
-											<option>Modal Delivery</option>
+											<select required className="form-control" id="department">
+												<option>Choose Department</option>
+												{deparmentItems.map( (dep,index)=>
+												<option key={index}>{dep.title}</option>
+												)}
+											</select>
+										</div>
+									</div>
+									<div className="col-lg-6">		
+										<div className="form-group">
+											<select required className="form-control" id="doctor">
+												<option>Choose Doctor</option>
+												{Doctors.map( (doc,index)=>
+													<option key={index}>{doc.name}</option>
+												)}
 											</select>
 										</div>
 									</div>
 									<div className="col-lg-6">
 										<div className="form-group">
-											<select className="form-control" id="doctor">
-											<option>Select Doctors</option>
-											<option>Software Design</option>
-											<option>Development cycle</option>
-											<option>Software Development</option>
-											<option>Maintenance</option>
-											<option>Process Query</option>
-											<option>Cost and Duration</option>
-											<option>Modal Delivery</option>
-											</select>
-										</div>
-									</div>
-									<div className="col-lg-6">
-										<div className="form-group">
-											<input  name="date" id="date" type="text" className="form-control" placeholder="dd/mm/yyyy" />
+											<input required name="date" id="date" type="text" className="form-control" placeholder="dd/mm/yyyy" />
 										</div>
 									</div>
 									<div className="col-lg-6">
 											<div className="form-group">
-												<input name="time" id="time" type="text" className="form-control" placeholder="Time" />
+												<input required name="time" id="time" type="text" className="form-control" placeholder="Time" />
 											</div>
 									</div>
 									<div className="col-lg-6">
 										<div className="form-group">
-											<input name="full_name" id="full_name" type="text" className="form-control" placeholder="Full Name" />
+											<input required name="full_name" id="full_name" type="text" className="form-control" placeholder="Full Name" />
 										</div>
 									</div>
 
 									<div className="col-lg-6">
 										<div className="form-group">
-											<input name="phone_number" id="phone_number" type="Number" className="form-control" placeholder="Your Phone number" />
+											<input required name="phone_number" id="phone_number" type="tel" pattern="[0-9]{10}" className="form-control" placeholder="Your Phone number" />
 										</div>
 									</div>
 									<div className="col-lg-12">
 										<div className="form-group-2 mb-4">
-											<textarea name="message" id="message" className="form-control" rows={6} placeholder="Your Message"></textarea>
+											<textarea required name="message" id="message" className="form-control" rows={6} placeholder="Your Message"></textarea>
 										</div>
 									</div>
 								</div>
