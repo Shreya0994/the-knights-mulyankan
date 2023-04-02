@@ -15,6 +15,7 @@ const navbarMenuList = new NavbarMenuList([
     submenu: [
       { page: "Doctors", path: "/doctors" },
       { page: "Appointment", path: "/appointment" },
+      { page: "Booked Appointments", path: "/appointments" }
     ],
   },
   {
