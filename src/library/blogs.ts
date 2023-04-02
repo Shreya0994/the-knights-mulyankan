@@ -45,3 +45,7 @@ export interface IBlogData {
   to: number;
   total: number;
 }
+
+export interface Params extends ParsedUrlQuery {
+  blogid: string;
+}
