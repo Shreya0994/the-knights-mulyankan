@@ -13,22 +13,28 @@ const Specialist = () => {
           <div className="row justify-content-center">
             <div className="col-lg-6">
               <div className="section-title text-center">
-                <Heading className="mb-4" title={SpecialistPageComponent.promo.title} />
+                <Heading
+                  className="mb-4"
+                  title={SpecialistPageComponent.promo.title}
+                />
                 <Divider />
-                <Description description={SpecialistPageComponent.promo.description} />
+                <Description
+                  description={SpecialistPageComponent.promo.description}
+                />
               </div>
             </div>
           </div>
           <div className="row">
-            {SpecialistPageComponent.doctorItems.filter((doctorItems: Doctor, index) => index < 4).map((doctor: Doctor, index) => (
-              <Doctor key={index} data={doctor} />
-            ))}
-          </div>
-        </div>
-      </section>
-
+            {SpecialistPageComponent.doctorItems
+              .filter((doctorItems: Doctor, index) => index < 4)
+              .map((doctor: Doctor, index) => (
+                <Doctor key={index} data={doctor} />
+              ))}
+          </div >
+        </div >
+      </section >
     </>
-  );
-};
+  )
+}
 
-export default Specialist;
+export default Specialist

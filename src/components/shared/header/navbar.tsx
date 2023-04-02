@@ -1,8 +1,8 @@
-import { companyInformation } from "@/data/company-information";
-import { navbarMenuList } from "@/data/navbar-data";
-import Image from "next/image";
-import MenuItems from "./menuitmes";
-import Link from "next/link";
+import { companyInformation } from '@/data/company-information'
+import { navbarMenuList } from '@/data/navbar-data'
+import Image from 'next/image'
+import MenuItems from './menuitmes'
+import Link from 'next/link'
 
 const HeaderNavigation = () => {
   return (
@@ -33,7 +33,7 @@ const HeaderNavigation = () => {
         <div className="collapse navbar-collapse" id="navbarmain">
           <ul className="navbar-nav ml-auto">
             {navbarMenuList.mainmenu.map((page, index) => {
-              return <MenuItems props={page} key={index} />;
+              return <MenuItems props={page} key={index} />
             })}
             <li className="nav-item dropdown">
               <Link
@@ -90,16 +90,11 @@ const HeaderNavigation = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="contact.html">
-                Contact
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default HeaderNavigation;
+export default HeaderNavigation
