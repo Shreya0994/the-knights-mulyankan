@@ -105,15 +105,15 @@ export type Services = {
 };
 
 export type ContentBlockProps = {
-  title: string
-  description: string
-  image: string
-}
+  title: string;
+  description: string;
+  image: string;
+};
 
 export type Awards = {
-  title: string,
-  clientItems: ClientItem[]
-}
+  title: string;
+  clientItems: ClientItem[];
+};
 export type ContentBlock = {
   title: string;
   description: string;
@@ -126,16 +126,14 @@ export type PromoComponent = {
 };
 
 export type DepartmentComponent = {
-  promo: PromoComponent,
-  deparmentItems : Card[]
+  promo: PromoComponent;
+  deparmentItems: Card[];
 };
 
-export type SpecialistComponent = {
-  promo: PromoComponent,
-  doctorItems : Doctor[]
-};
-
-export enum Page { About, Deparment }
+export enum Page {
+  About,
+  Deparment,
+}
 
 export type ReccomendationsProps = {
   title: string;
@@ -154,3 +152,21 @@ export interface IAppointment {
   created_at: string,
   updated_at: string
 }
+export type ContactUsForm = {
+  nameField: string;
+  emailField: string;
+  subjectField: string;
+  phoneField: string;
+  messageField: string;
+  submitButton: string;
+  title: string;
+  description: string;
+};
+
+export type SingleContactCard = {
+  logoclass: string;
+  text: string;
+};
+export type ContactCards = {
+  cardList: SingleContactCard[];
+};
