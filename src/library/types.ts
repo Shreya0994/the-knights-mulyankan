@@ -155,3 +155,11 @@ export type ContactUsForm = {
   title: string
   description: string
 }
+
+export type SingleContactCard = {
+  logoclass: string,
+  text: string
+}
+export type ContactCards = {
+  cardList: SingleContactCard[]
+}

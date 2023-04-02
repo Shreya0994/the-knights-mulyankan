@@ -48,15 +48,15 @@ const HeaderNavigation = () => {
               </Link>
               <ul className="dropdown-menu" aria-labelledby="dropdown03">
                 <li>
-                  <Link className="dropdown-item" href="doctor.html">
+                  <Link className="dropdown-item" href="/doctors">
                     Doctors
                   </Link>
                 </li>
-                <li>
-                  <Link className="dropdown-item" href="doctor-single.html">
+                {/* <li>
+                  <Link className="dropdown-item" href="/doctors">
                     Doctor Single
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link className="dropdown-item" href="appoinment.html">
                     Appoinment
