@@ -146,19 +146,14 @@ export type ReccomendationsProps = {
 }
 
 export type ContactUsForm = {
-  nameField: string
-  emailField: string
-  subjectField: string
-  phoneField: string
-  messageField: string
-  submitButton: string
   title: string
   description: string
 }
 
 export type SingleContactCard = {
   logoclass: string,
-  text: string
+  text: string,
+  subtext: string
 }
 export type ContactCards = {
   cardList: SingleContactCard[]
