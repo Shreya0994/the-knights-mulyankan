@@ -3,14 +3,18 @@ import Cards from "@/components/cards/cards";
 import { CardsItems } from "@/data/cards";
 import PageBanner from "@/components/pageBanner/pagebanner";
 import ContentBlock from "@/components/contentblock/contentblock";
-import { Page } from "@/library/types";
+import { NextPageWithLayout, Page } from "@/library/types";
 import Specialist from "@/components/specialists/specialists";
 import { ReccomendationsData } from "@/data/reccomendations";
 import Recommendations from "@/components/recommendation/recommendations";
+import Head from "next/head";
 
-const About = () => {
+const About: NextPageWithLayout = () => {
   return (
     <>
+      <Head>
+        <title>About - Novena</title>
+      </Head>
       <PageBanner subHeading="About Us" heading="About Us" />
       <ContentBlock
         title="Award winning patient care"

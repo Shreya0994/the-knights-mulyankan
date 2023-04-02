@@ -28,7 +28,7 @@ const Login: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Login</title>
+        <title>Login - Novana</title>
       </Head>
       <div className="contact-form-wrapper section">
         <div className="container">
