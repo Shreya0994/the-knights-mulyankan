@@ -8,25 +8,27 @@ type InfoCardProps = {
 const InfoCard = (props: InfoCardProps) => {
   return (
     <>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="feature-block d-lg-flex">
-              {props.cards.map((card: InfoCard, index: number) => (
-                <CardItem
-                  key={index}
-                  icon={card.icon}
-                  title={card.title}
-                  subHeading={card.subHeading}
-                  description={card.description}
-                  cta={card.cta}
-                  ctaText={card.ctaText}
-                />
-              ))}
+      <section className="features">
+        <div className="container">
+            <div className="row">
+            <div className="col-lg-12">
+                <div className="feature-block d-lg-flex">
+                {props.cards.map((card, index) => (
+                    <CardItem
+                    key={index}
+                    icon={card.icon}
+                    title={card.title}
+                    subHeading={card.subHeading}
+                    description={card.description}
+                    cta={card.cta}
+                    ctaText={card.ctaText}
+                    />
+                ))}
+                </div>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
