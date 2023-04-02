@@ -14,7 +14,6 @@ const ContactUsForm = (props: ContactUsForm) => {
   })
 
   const handleChange = (e: any) => {
-    console.log(e.target.name)
     setUser({ ...user, [e.target.name]: e.target.value })
   }
 
