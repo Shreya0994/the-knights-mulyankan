@@ -1,19 +1,23 @@
-import Banner from "@/components/banner/banner";
-import Head from "next/head";
-import bg from "@assets/images/bg/slider-bg-1.jpg";
-import Promo from "@/components/promo/promo";
-import { StatisticItems } from "@/data/statistics";
-import Statistics from "@/components/statistics/statistics";
-import Services from "@/components/service/services";
-import { Services as ServicesData } from "@/data/services";
-import Clients from "@/components/clients/clients";
-import { Client } from "@/data/clients";
-import Testimonial from "@/components/testimonial/testimonials";
-import InfoCard from "@/components/infocard/infocard";
-import { InfoCards } from "@/data/info-card";
-import Testimonials from "@/data/testimonials";
+import Banner from '@/components/banner/banner'
+import Head from 'next/head'
+import bg from '@assets/images/bg/slider-bg-1.jpg'
+import Promo from '@/components/promo/promo'
+import { StatisticItems } from '@/data/statistics'
+import Statistics from '@/components/statistics/statistics'
+import Services from '@/components/service/services'
+import { Services as ServicesData } from '@/data/services'
+import Clients from '@/components/clients/clients'
+import { Client } from '@/data/clients'
+import Testimonial from '@/components/testimonial/testimonials'
+import InfoCard from '@/components/infocard/infocard'
+import { InfoCards } from '@/data/info-card'
+import { TestimonialsProps } from '@/library/types'
+import { NextPageWithLayout } from '@/library/types'
 
-export default function Home() {
+const Home: NextPageWithLayout<{
+  testimonials: TestimonialsProps
+  services: ServicesData
+}> = (props: { testimonials: TestimonialsProps; services: ServicesData }) => {
   return (
     <>
       <Head>
@@ -23,27 +27,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner
-        title={"Total Health care solution"}
-        heading={"Your most trusted health partner"}
+        title={'Total Health care solution'}
+        heading={'Your most trusted health partner'}
         description={
-          "A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat."
+          'A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat.'
         }
-        ctaText={"Make appoinment"}
-        ctaLink={"appoinment.html"}
+        ctaText={'Make appoinment'}
+        ctaLink={'appoinment.html'}
         bgImg={bg.src}
       />
       <InfoCard cards={InfoCards} />
       <Promo />
       <Statistics statisticItems={StatisticItems} />
       <Services
-        title={ServicesData.title}
-        description={ServicesData.description}
-        serviceItems={ServicesData.serviceItems}
+        title={props.services.title}
+        description={props.services.description}
+        serviceItems={props.services.serviceItems}
       />
       <Testimonial
-        title={Testimonials.title}
-        description={Testimonials.description}
-        testimonials={Testimonials.testimonials}
+        title={props.testimonials.title}
+        description={props.testimonials.description}
+        testimonials={props.testimonials.testimonials}
       />
       <Clients
         title={Client.title}
@@ -51,5 +55,25 @@ export default function Home() {
         clientItems={Client.clientItems}
       />
     </>
-  );
+  )
 }
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  let res = await fetch('http://localhost:3000/api/testimonials')
+  const testimonials = (await res.json()) as TestimonialsProps
+
+  res = await fetch('http://localhost:3000/api/services')
+  const services = (await res.json()) as ServicesData
+
+  // Pass data to the page via props
+  return {
+    props: {
+      testimonials: testimonials,
+      services: services,
+    },
+  }
+}
+
+export default Home
