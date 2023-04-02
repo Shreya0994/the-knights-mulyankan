@@ -29,67 +29,50 @@ const Appointment: NextPageWithLayout = () => {
 
   useEffect(() => {
     loadData();
-  }, [authContext]);
+  }, []);
 
   return (
     <>
-      {authContext.user && (
-        <>
-          <Head>
-            <title>Appointments - Novena</title>
-          </Head>
-          <PageBanner subHeading="All Appointment" heading="All Appointment" />
-          <div className="container">
-            <br />
-            <table className="table" style={{ width: "100%" }}>
-              <thead>
-                <tr style={{ border: "1px solid #dddddd" }}>
-                  <th style={{ border: "1px solid #dddddd" }}>Doctor</th>
-                  <th style={{ border: "1px solid #dddddd" }}>Department</th>
-                  <th style={{ border: "1px solid #dddddd" }}>Patient Name</th>
-                  <th style={{ border: "1px solid #dddddd" }}>Patient Phone</th>
-                  <th style={{ border: "1px solid #dddddd" }}>Message</th>
-                  <th style={{ border: "1px solid #dddddd" }}>
-                    Appointment Date
-                  </th>
-                  <th style={{ border: "1px solid #dddddd" }}>
-                    Appointment Time
-                  </th>
+      <Head>
+        <title>Appointments - Novena</title>
+      </Head>
+      <PageBanner subHeading="All Appointment" heading="All Appointment" />
+      <div className="container">
+        <br />
+        <table className="table" style={{ width: "100%" }}>
+          <thead>
+            <tr style={{ border: "1px solid #dddddd" }}>
+              <th style={{ border: "1px solid #dddddd" }}>Doctor</th>
+              <th style={{ border: "1px solid #dddddd" }}>Department</th>
+              <th style={{ border: "1px solid #dddddd" }}>Patient Name</th>
+              <th style={{ border: "1px solid #dddddd" }}>Patient Phone</th>
+              <th style={{ border: "1px solid #dddddd" }}>Message</th>
+              <th style={{ border: "1px solid #dddddd" }}>Appointment Date</th>
+              <th style={{ border: "1px solid #dddddd" }}>Appointment Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            {appointments &&
+              appointments.map((app: any, index: number) => (
+                <tr key={index} style={{ border: "1px solid #dddddd" }}>
+                  <td style={{ border: "1px solid #dddddd" }}>{app.doctor}</td>
+                  <td style={{ border: "1px solid #dddddd" }}>
+                    {app.department}
+                  </td>
+                  <td style={{ border: "1px solid #dddddd" }}>
+                    {app.full_name}
+                  </td>
+                  <td style={{ border: "1px solid #dddddd" }}>
+                    {app.phone_number}
+                  </td>
+                  <td style={{ border: "1px solid #dddddd" }}>{app.message}</td>
+                  <td style={{ border: "1px solid #dddddd" }}>{app.date}</td>
+                  <td style={{ border: "1px solid #dddddd" }}>{app.time}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {appointments &&
-                  appointments.map((app: any, index: number) => (
-                    <tr key={index} style={{ border: "1px solid #dddddd" }}>
-                      <td style={{ border: "1px solid #dddddd" }}>
-                        {app.doctor}
-                      </td>
-                      <td style={{ border: "1px solid #dddddd" }}>
-                        {app.department}
-                      </td>
-                      <td style={{ border: "1px solid #dddddd" }}>
-                        {app.full_name}
-                      </td>
-                      <td style={{ border: "1px solid #dddddd" }}>
-                        {app.phone_number}
-                      </td>
-                      <td style={{ border: "1px solid #dddddd" }}>
-                        {app.message}
-                      </td>
-                      <td style={{ border: "1px solid #dddddd" }}>
-                        {app.date}
-                      </td>
-                      <td style={{ border: "1px solid #dddddd" }}>
-                        {app.time}
-                      </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
-          </div>
-        </>
-      )}
-      {!authContext.user && <></>}
+              ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 };
