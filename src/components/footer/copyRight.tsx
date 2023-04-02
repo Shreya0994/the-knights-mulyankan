@@ -35,9 +35,6 @@ const SubscribeForm = ({ success }: { success: () => void }) => {
 		const response = await fetch(endpoint, options)
 		console.log(response);
 		// Get the response data from server as JSON.
-		// If server returns the name submitted, that means the form works.
-		// const result = await response.json()
-		// console.log(response.statuscode)
 		if (response.status === 201) {
 			success();
 		}

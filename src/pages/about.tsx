@@ -12,7 +12,8 @@ import Head from "next/head";
 
 
 export async function getServerSideProps() {
-  let res = await fetch("http://localhost:3000/api/cards");
+  const apiHost = process.env.API_HOST;
+  let res = await fetch(`${apiHost}/api/cards`);
   const cards = (await res.json()) as Card[];
   return {
     props: {
@@ -20,9 +21,6 @@ export async function getServerSideProps() {
     },
   };
 }
-
-
-
 const About: NextPageWithLayout<{ cards: Card[] }> = (props: { cards: Card[] }) => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -30,7 +28,6 @@ const About: NextPageWithLayout<{ cards: Card[] }> = (props: { cards: Card[] }) 
 
     document.getElementsByTagName("body")[0].appendChild(script);
   }, []);
-
 
   return (
     <>
@@ -43,9 +40,7 @@ const About: NextPageWithLayout<{ cards: Card[] }> = (props: { cards: Card[] }) 
         description="Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat."
         image="https://themewagon.github.io/novena/images/about/sign.png"
       />
-
       <Cards cards={props.cards} page={Page.About} />
-
       <Specialist
         heading="Meet Our Specialist"
         description="Today’s users expect effortless experiences. Don’t let essential people and processes stay stuck in the past. Speed it up, skip the hassles"
