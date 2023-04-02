@@ -1,3 +1,5 @@
+import { ParsedUrlQuery } from "querystring";
+
 export interface IDoctor {
   id: number;
   image: string;
@@ -43,3 +45,7 @@ export type Education = {
   degree: string;
   description: string;
 };
+
+export interface Params extends ParsedUrlQuery {
+  doctorid: string;
+}

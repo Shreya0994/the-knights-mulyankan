@@ -1,10 +1,11 @@
 import { IDoctor } from "@/library/doctors";
+import Image from "next/image";
 
-type Props = {
+type DoctorDetailsProps = {
   doctor: IDoctor;
 };
 
-export const DoctorsDetails = (props: Props) => {
+export const DoctorDetails = (props: DoctorDetailsProps) => {
   return (
     <>
       <section className="section doctor-single">
@@ -12,10 +13,12 @@ export const DoctorsDetails = (props: Props) => {
           <div className="row">
             <div className="col-lg-4 col-md-6">
               <div className="doctor-img-block">
-                <img
-                  src="images/team/1.jpg"
+                <Image
+                  src={props.doctor.image}
                   alt=""
                   className="img-fluid w-100"
+                  width={350}
+                  height={350}
                 />
 
                 <div className="info-block mt-4">
