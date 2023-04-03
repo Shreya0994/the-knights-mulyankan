@@ -3,13 +3,14 @@ import { NextPageWithLayout } from "@/library/types";
 import Head from "next/head";
 import PageBanner from "@/components/pageBanner/pagebanner";
 import { IBlog, IBlogData, Params } from "@/library/blogs";
+import BlogDetails from "@/components/blogs/blogdetails";
 
 type BlogDetailsProps = {
   blog: IBlog;
 };
 
 // blogs will be populated at build time by getStaticProps()
-const BlogDetails: NextPageWithLayout<BlogDetailsProps> = (props) => {
+const BlogDetailsPage: NextPageWithLayout<BlogDetailsProps> = (props) => {
   return (
     <>
       <Head>
@@ -56,4 +57,4 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
   return { paths, fallback: false };
 };
 
-export default BlogDetails;
+export default BlogDetailsPage;

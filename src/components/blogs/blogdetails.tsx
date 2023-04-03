@@ -1,7 +1,11 @@
 import { IBlog } from "@/library/blogs";
 import Image from "next/image";
 
-const BlogDetails = (props: IBlog) => {
+type BlogDetailsProps = {
+  blog: IBlog;
+};
+
+const BlogDetails = (props: BlogDetailsProps) => {
   return (
     <section className="section blog-wrap">
       <div className="container">
@@ -14,21 +18,23 @@ const BlogDetails = (props: IBlog) => {
                     src="https://themewagon.github.io/novena/images/blog/blog-1.jpg"
                     alt=""
                     className="img-fluid"
+                    width={730}
+                    height={487}
                   />
 
                   <div className="blog-item-content mt-5">
                     <div className="blog-item-meta mb-3">
                       <span className="text-black text-capitalize mr-3">
                         <i className="icofont-calendar mr-2"></i>
-                        {new Date(props.created_at).toDateString()}
+                        {new Date(props.blog.created_at).toDateString()}
                       </span>
                     </div>
 
-                    <h2 className="mb-4 text-md">{props.title}</h2>
+                    <h2 className="mb-4 text-md">{props.blog.title}</h2>
 
-                    <p className="lead mb-4">{props.excerpt}</p>
+                    <p className="lead mb-4">{props.blog.excerpt}</p>
 
-                    <p>{props.content}</p>
+                    <p>{props.blog.content}</p>
                   </div>
                 </div>
               </div>
