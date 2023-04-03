@@ -37,7 +37,7 @@ export default function Home() {
           "A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat."
         }
         ctaText={"Make appoinment"}
-        ctaLink={"appoinment.html"}
+        ctaLink={"appointment"}
         bgImg={bg.src}
       />
       <InfoCard cards={InfoCards} />

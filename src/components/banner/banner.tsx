@@ -23,7 +23,7 @@ const Banner = (props: BannerProps) => {
 
                                 <p className="mb-4 pr-5">{props.description}</p>
                                 <div className="btn-container ">
-                                    <Link href={props.ctaLink} target="_blank" className="btn btn-main-2 btn-icon btn-round-full">{props.ctaText} <i className="icofont-simple-right ml-2  "></i></Link>
+                                    <Link href={props.ctaLink} className="btn btn-main-2 btn-icon btn-round-full">{props.ctaText} <i className="icofont-simple-right ml-2  "></i></Link>
                                 </div>
                             </div>
                         </div>
