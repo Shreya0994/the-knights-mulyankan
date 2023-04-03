@@ -41,7 +41,6 @@ const Blogs = (props: BlogProps) => {
 
               <Link
                 href={`/blogs/${blog.id}`}
-                target="_blank"
                 className="btn btn-main btn-icon btn-round-full"
               >
                 Read More <i className="icofont-simple-right ml-2  "></i>
