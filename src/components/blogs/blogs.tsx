@@ -28,7 +28,8 @@ const Blogs = (props: BlogProps) => {
                   <i className="icofont-comment mr-2"></i>5 Comments
                 </span> */}
                 <span className="text-black text-capitalize mr-3">
-                  <i className="icofont-calendar mr-1"></i> {blog.created_at}
+                  <i className="icofont-calendar mr-1"></i>{" "}
+                  {new Date(blog.created_at).toDateString()}
                 </span>
               </div>
 
