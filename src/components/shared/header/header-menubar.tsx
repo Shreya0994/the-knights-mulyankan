@@ -1,7 +1,7 @@
 import { companyInformation } from "@/data/company-information";
 import { navbarMenuList } from "@/data/navbar-data";
 import Image from "next/image";
-import MenuItems from "./menuitmes";
+import MenuItems from "./menuitems";
 import Link from "next/link";
 
 const HeaderNavigation = () => {
