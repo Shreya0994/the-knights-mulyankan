@@ -23,7 +23,7 @@ const Service: NextPageWithLayout = () => {
         heading={"We are pleased to offer you the chance to have the healthy"}
         description={""}
         ctaText={"Make appoinment"}
-        ctaLink={"appoinment.html"}
+        ctaLink={"appointment"}
         bgImg={bg.src}
       />
     </>
