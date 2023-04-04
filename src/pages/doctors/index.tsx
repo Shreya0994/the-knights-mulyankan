@@ -25,14 +25,16 @@ const Doctor: NextPageWithLayout<{
 };
 
 // This gets called on every request
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const apiHost = process.env.API_HOST;
 
   // Fetch data from external API
-  let res = await fetch(`${apiHost}/api/doctors`);
+  let res = await fetch(`https://the-knights-novena.vercel.app/api/doctors`);
   const doctors = (await res.json()) as IDoctor[];
 
-  res = await fetch(`${apiHost}/api/doctors/departments`);
+  res = await fetch(
+    `https://the-knights-novena.vercel.app/api/doctors/departments`
+  );
   const departments = (await res.json()) as string[];
 
   // Pass data to the page via props

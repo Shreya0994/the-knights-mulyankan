@@ -13,5 +13,7 @@ export default function handler(
     res
       .status(200)
       .json(Doctors.filter((doctor) => doctor.id.toString() === doctorid)[0]);
+  } else {
+    res.status(404);
   }
 }

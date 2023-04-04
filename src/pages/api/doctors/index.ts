@@ -8,6 +8,7 @@ export default function handler(
   res: NextApiResponse<IDoctor[]>
 ) {
   const { department } = req.query;
+  // if department is passed in the query string, filter the list of doctors based on that department and send send in the response
   if (department) {
     res
       .status(200)
@@ -18,6 +19,7 @@ export default function handler(
         )
       );
   } else {
+    // If not department provided, send list of all doctors.
     res.status(200).json(Doctors);
   }
 }
