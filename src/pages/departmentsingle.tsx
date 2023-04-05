@@ -4,6 +4,8 @@ import TimingSchedule from "@/components/department/dept-timing-block";
 import { ServiceFeature } from "@/components/department/deptfeature";
 import Image from "next/image";
 import img1 from "@assets/images/service/bg-1.jpg";
+import { Department } from "@/library/departmentsingle";
+import { departmentData } from "@/data/departmentsingle";
 
 const DepartmentSingle = () => {
   return (
@@ -14,18 +16,18 @@ const DepartmentSingle = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="department-img">
-                <Image src={img1} alt="" className="img-fluid" />
+                <Image src={departmentData.image} alt="" className="img-fluid" width={1110} height={740} />
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-8">
               <div className="department-content mt-5">
-                <h3 className="text-md">Medecine and Health</h3>
+                <h3 className="text-md">{departmentData.deptname}</h3>
                 <div className="divider my-4"></div>
-                <p className="lead">Age forming covered you entered the examine. Blessing scarcely confined her contempt wondered shy. Dashwoods contented sportsmen at up no convinced cordially affection.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum recusandae dolor autem laudantium, quaerat vel dignissimos. Magnam sint suscipit omnis eaque unde eos aliquam distinctio, quisquam iste, itaque possimus . Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet alias modi eaque, ratione recusandae cupiditate dolorum repellendus iure eius rerum hic minus ipsa at, corporis nesciunt tempore vero voluptas. Tempore.</p>
-                <ServiceFeature />
+                <p className="lead">{departmentData.description}</p>
+                <p>{departmentData.longdescription}</p>
+                {/* <ServiceFeature /> */}
               </div>
             </div>
             <TimingSchedule />
