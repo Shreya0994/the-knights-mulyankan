@@ -17,7 +17,7 @@ const Recommendations = (props: ReccomendationsProps) => {
         </div>
         <div className="row align-items-center">
           <div className="col-lg-6 testimonial-wrap offset-lg-6">
-            {props.testimonials.filter((Testimoniallist,index) => index < 2).map(
+            {props.testimonials.filter((Testimoniallist,index) => index < 4).map(
               (testimonial: TestimonialItem, index: number) => (
                 <RecommendationItem {...testimonial} key={index} />
               )

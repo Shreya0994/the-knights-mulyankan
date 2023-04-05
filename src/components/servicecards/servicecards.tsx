@@ -6,12 +6,13 @@ import Image from "next/image";
 const ServiceCards = () => {
 
     const [data, setData] = useState<IServiceCardInformation[] | null>(null);
+
     useEffect(() => {
         fetch("/api/servicecard-information")
             .then((res) => res.json())
             .then((data) => {
                 setData(data);
-                console.log("data is", data);
+
             });
     }, []);
 
@@ -20,6 +21,9 @@ const ServiceCards = () => {
             <section className="section service-2">
                 <div className="container">
                     <div className="row">
+                        {
+                            !data && <span>Data is laoding</span>
+                        }
                         {
                             data && data.map((serviceitem, index) => (
                                 <div className="col-lg-4 col-md-6 col-sm-6" key={index}>
@@ -41,3 +45,13 @@ const ServiceCards = () => {
 };
 
 export default ServiceCards;
+
+function LoadingSpinner() {
+    return (
+        <div className="spinner-container">
+            <div className="loading-spinner">
+                Data is loading....
+            </div>
+        </div>
+    );
+}

@@ -12,8 +12,16 @@ import Testimonial from "@/components/testimonial/testimonials";
 import InfoCard from "@/components/infocard/infocard";
 import { InfoCards } from "@/data/info-card";
 import Testimonials from "@/data/testimonials";
+import { useEffect } from "react";
+import Script from "next/script";
 
 export default function Home() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/script.js";
+
+    document.getElementsByTagName("body")[0].appendChild(script);
+  }, []);
   return (
     <>
       <Head>
@@ -29,7 +37,7 @@ export default function Home() {
           "A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat."
         }
         ctaText={"Make appoinment"}
-        ctaLink={"appoinment.html"}
+        ctaLink={"appointment"}
         bgImg={bg.src}
       />
       <InfoCard cards={InfoCards} />

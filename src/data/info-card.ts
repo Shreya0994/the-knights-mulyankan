@@ -6,7 +6,7 @@ export const InfoCards: InfoCard[] = [
     title: "Online Appoinment",
     description:
       "Get All time support for emergency. We have introduced the principle of family medicine.",
-    cta: "#",
+    cta: "appointment",
     ctaText: "Make a appoinment",
     icon: "icofont-surgeon-alt",
   },

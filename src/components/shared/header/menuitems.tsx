@@ -7,7 +7,7 @@ const MenuItems = (props: { props: NavbarList }) => {
     <li className="nav-item dropdown">
       <Link
         className="nav-link dropdown-toggle"
-        href="department.html"
+        href=""
         id="dropdown02"
         data-toggle="dropdown"
         aria-haspopup="true"
